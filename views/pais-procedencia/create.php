@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\TipoDoc */
+/* @var $model app\models\PaisProcedencia */
 
-$this->title = 'Crear Tipo de Documento';
-$this->params['breadcrumbs'][] = ['label' => 'Tipo Docs', 'url' => ['index']];
+$this->title = 'Create Pais Procedencia';
+$this->params['breadcrumbs'][] = ['label' => 'Pais Procedencias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="tipo-doc-create">
+<div class="pais-procedencia-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

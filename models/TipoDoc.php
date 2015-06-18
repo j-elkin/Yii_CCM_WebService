@@ -28,7 +28,7 @@ class TipoDoc extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idtipo_doc', 'tipo_documento'], 'required'],
+            [['tipo_documento'], 'required'],
             [['idtipo_doc'], 'integer'],
             [['tipo_documento'], 'string', 'max' => 45]
         ];
@@ -40,8 +40,8 @@ class TipoDoc extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idtipo_doc' => 'Idtipo Doc',
-            'tipo_documento' => 'Tipo Documento',
+            'idtipo_doc' => 'ID del Tipo de Documento',
+            'tipo_documento' => 'Nombre del Tipo Documento',
         ];
     }
 

@@ -28,7 +28,7 @@ class TipoArea extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idtipo_area', 'tipo_area'], 'required'],
+            [['tipo_area'], 'required'],
             [['idtipo_area'], 'integer'],
             [['tipo_area'], 'string', 'max' => 45]
         ];
@@ -40,8 +40,8 @@ class TipoArea extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idtipo_area' => 'Idtipo Area',
-            'tipo_area' => 'Tipo Area',
+            'idtipo_area' => 'ID del Area',
+            'tipo_area' => 'Nombre del Tipo Area',
         ];
     }
 

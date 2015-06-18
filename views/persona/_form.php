@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
+use app\models\TipoDoc;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Persona */
@@ -27,9 +29,12 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'telefono')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'codigo_qr')->textInput() ?>
-
-    <?= $form->field($model, 'tipo_doc_idtipo_doc')->textInput() ?>
-
+    
+    <?= $form->field($model, 'tipo_doc_idtipo_doc')->dropDownList(
+        ArrayHelper::map(TipoDoc::find()->all(),'idtipo_doc','tipo_documento'),
+        ['prompt'=>'Seleccione documento']
+    ) ?>
+    
     <?= $form->field($model, 'pais_procedencia_idpais_procedencia')->textInput() ?>
 
     <?= $form->field($model, 'institucion_idinstitucion')->textInput() ?>

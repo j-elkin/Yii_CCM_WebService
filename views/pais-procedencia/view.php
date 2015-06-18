@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\TipoArea */
+/* @var $model app\models\PaisProcedencia */
 
-$this->title = $model->idtipo_area;
-$this->params['breadcrumbs'][] = ['label' => 'Tipo Areas', 'url' => ['index']];
+$this->title = $model->idpais_procedencia;
+$this->params['breadcrumbs'][] = ['label' => 'Pais Procedencias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="tipo-area-view">
+<div class="pais-procedencia-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Actualizar', ['update', 'id' => $model->idtipo_area], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Borrar', ['delete', 'id' => $model->idtipo_area], [
+        <?= Html::a('Update', ['update', 'id' => $model->idpais_procedencia], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->idpais_procedencia], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -28,8 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'idtipo_area',
-            'tipo_area',
+            'idpais_procedencia',
+            'nombre',
         ],
     ]) ?>
 

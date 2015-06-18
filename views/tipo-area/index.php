@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\TipoAreaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tipo Areas';
+$this->title = 'Tipos de Areas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tipo-area-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tipo Area', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Tipo de Area', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

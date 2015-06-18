@@ -30,7 +30,7 @@ class Institucion extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idinstitucion', 'nombre', 'pais', 'ciudad'], 'required'],
+            [['nombre', 'pais', 'ciudad'], 'required'],
             [['idinstitucion'], 'integer'],
             [['nombre', 'pais', 'ciudad'], 'string', 'max' => 45]
         ];
@@ -42,7 +42,7 @@ class Institucion extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idinstitucion' => 'Idinstitucion',
+            'idinstitucion' => 'ID de la Institución',
             'nombre' => 'Nombre',
             'pais' => 'Pais',
             'ciudad' => 'Ciudad',

@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\TipoArea */
 
-$this->title = 'Create Tipo Area';
+$this->title = 'Crear Tipo de Area';
 $this->params['breadcrumbs'][] = ['label' => 'Tipo Areas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

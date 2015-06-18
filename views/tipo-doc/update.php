@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\TipoDoc */
 
-$this->title = 'Update Tipo Doc: ' . ' ' . $model->idtipo_doc;
+$this->title = 'Actualizar Tipo de Documento: ' . ' ' . $model->idtipo_doc;
 $this->params['breadcrumbs'][] = ['label' => 'Tipo Docs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idtipo_doc, 'url' => ['view', 'id' => $model->idtipo_doc]];
 $this->params['breadcrumbs'][] = 'Update';
