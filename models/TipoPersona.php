@@ -28,7 +28,7 @@ class TipoPersona extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idtipo_persona', 'tipo_persona'], 'required'],
+            [['tipo_persona'], 'required'],
             [['idtipo_persona'], 'integer'],
             [['tipo_persona'], 'string', 'max' => 45]
         ];
@@ -40,8 +40,8 @@ class TipoPersona extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idtipo_persona' => 'Idtipo Persona',
-            'tipo_persona' => 'Tipo Persona',
+            'idtipo_persona' => 'ID del Tipo Persona',
+            'tipo_persona' => 'Nombre del Tipo Persona',
         ];
     }
 

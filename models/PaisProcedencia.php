@@ -38,7 +38,7 @@ class PaisProcedencia extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idpais_procedencia' => 'Idpais Procedencia',
+            'idpais_procedencia' => 'ID País de Procedencia',
             'nombre' => 'Nombre',
         ];
     }

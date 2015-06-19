@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\PaisProcedencia */
 
-$this->title = 'Create Pais Procedencia';
+$this->title = 'Crear País de Procedencia';
 $this->params['breadcrumbs'][] = ['label' => 'Pais Procedencias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

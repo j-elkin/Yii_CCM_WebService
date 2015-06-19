@@ -45,9 +45,9 @@ class Persona extends \yii\db\ActiveRecord
     {
         return [
             [['docPersona', 'nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'required'],
-            [['docPersona', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'integer'],
-            [['codigo_qr'], 'string'],
-            [['nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'telefono'], 'string', 'max' => 45]
+            [['docPersona', 'telefono', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'integer'],
+            [['correo_electronico'], 'email'],
+            [['nombre', 'apellidos', 'genero', 'fecha_nacimiento'], 'string', 'max' => 45]
         ];
     }
 
@@ -57,18 +57,18 @@ class Persona extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'docPersona' => 'Doc Persona',
+            'docPersona' => 'Documento de Identidad',
             'nombre' => 'Nombre',
             'apellidos' => 'Apellidos',
-            'genero' => 'Genero',
-            'fecha_nacimiento' => 'Fecha Nacimiento',
-            'correo_electronico' => 'Correo Electronico',
-            'telefono' => 'Telefono',
-            'codigo_qr' => 'Codigo Qr',
-            'tipo_doc_idtipo_doc' => 'Tipo Doc Idtipo Doc',
-            'pais_procedencia_idpais_procedencia' => 'Pais Procedencia Idpais Procedencia',
-            'institucion_idinstitucion' => 'Institucion Idinstitucion',
-            'tipo_persona_idtipo_persona' => 'Tipo Persona Idtipo Persona',
+            'genero' => 'Género',
+            'fecha_nacimiento' => 'Fecha de Nacimiento',
+            'correo_electronico' => 'Correo Electrónico',
+            'telefono' => 'Teléfono',
+            'codigo_qr' => 'Codigo QR',
+            'tipo_doc_idtipo_doc' => 'Tipo de Documento',
+            'pais_procedencia_idpais_procedencia' => 'País de Procedencia',
+            'institucion_idinstitucion' => 'Institución',
+            'tipo_persona_idtipo_persona' => 'Tipo Persona',
         ];
     }
 

@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Persona', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Persona', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -30,13 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'apellidos',
             'genero',
             'fecha_nacimiento',
-            // 'correo_electronico',
+            //'correo_electronico',
             // 'telefono',
             // 'codigo_qr',
-            // 'tipo_doc_idtipo_doc',
-            // 'pais_procedencia_idpais_procedencia',
-            // 'institucion_idinstitucion',
-            // 'tipo_persona_idtipo_persona',
+            'tipo_doc_idtipo_doc',
+            'pais_procedencia_idpais_procedencia',
+            'institucion_idinstitucion',
+            'tipo_persona_idtipo_persona',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
