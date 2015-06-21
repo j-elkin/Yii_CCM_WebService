@@ -8,6 +8,7 @@ use app\models\PersonaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * PersonaController implements the CRUD actions for Persona model.
@@ -58,11 +59,24 @@ class PersonaController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+    public $file_qr;
     public function actionCreate()
     {
         $model = new Persona();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            //Obtener la instancia del archivo QR subido
+            $QrName = $model->docPersona;
+            $model->file_qr = UploadedFile::getInstance($model, 'file_qr');
+            //$model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
+
+            //Guardando el path en el campo codigo_qr de la BD
+            $model->codigo_qr = 'uploads/'.$QrName.'.'.$model->file_qr->extension;
+            $model->save();
+
+            $model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
+
             return $this->redirect(['view', 'id' => $model->docPersona]);
         } else {
             return $this->render('create', [
@@ -71,6 +85,19 @@ class PersonaController extends Controller
         }
     }
 
+    /**
+    * Nuevo
+    * Muestra el asset como un blob
+    * @param integer $docPersona
+    * @return mixed
+    */
+    public function actionGet($id){
+        $model=$this->findModel($id);
+        header('Content-type: '.$model->contentType);
+        echo $model->file->getBytes();
+    }
+
+    
     /**
      * Updates an existing Persona model.
      * If update is successful, the browser will be redirected to the 'view' page.

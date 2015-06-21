@@ -16,7 +16,7 @@ use dosamigos\datepicker\DatePicker;
 
 <div class="persona-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
     <?= $form->field($model, 'docPersona')->textInput() ?>
 
@@ -46,7 +46,8 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'telefono')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'codigo_qr')->fileInput() ?>
+    <?= $form->field($model, 'file_qr')->fileInput() ?>
+
     
     <?= $form->field($model, 'tipo_doc_idtipo_doc')->dropDownList(
         ArrayHelper::map(TipoDoc::find()->all(),'idtipo_doc','tipo_documento'),

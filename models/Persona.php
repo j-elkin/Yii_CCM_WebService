@@ -33,6 +33,7 @@ class Persona extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $file_qr;    
     public static function tableName()
     {
         return 'persona';
@@ -47,6 +48,8 @@ class Persona extends \yii\db\ActiveRecord
             [['docPersona', 'nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'required'],
             [['docPersona', 'telefono', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'integer'],
             [['correo_electronico'], 'email'],
+            [['file_qr'], 'file', 'extensions'=>'jpg, gif, png'],
+            [['codigo_qr'], 'string', 'max' => 100],
             [['nombre', 'apellidos', 'genero', 'fecha_nacimiento'], 'string', 'max' => 45]
         ];
     }
@@ -69,6 +72,7 @@ class Persona extends \yii\db\ActiveRecord
             'pais_procedencia_idpais_procedencia' => 'País de Procedencia',
             'institucion_idinstitucion' => 'Institución',
             'tipo_persona_idtipo_persona' => 'Tipo Persona',
+            'file_qr' => 'Código QR'
         ];
     }
 

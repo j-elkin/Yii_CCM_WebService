@@ -25,12 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
+            
             'docPersona',
             'nombre',
             'apellidos',
             'genero',
             //'fecha_nacimiento',
-            //'correo_electronico',
+            'correo_electronico',
             // 'telefono',
             // 'codigo_qr',
             'tipo_doc_idtipo_doc',
