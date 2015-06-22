@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\CcmSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Ccms';
+$this->title = 'CCMs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ccm-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Ccm', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear CCM', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'direccion',
             'telefono',
             'fecha_inicio',
-            // 'fecha_fin',
+            'fecha_fin',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

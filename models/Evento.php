@@ -38,9 +38,10 @@ class Evento extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idevento', 'tipo_evento_idtipo_evento', 'CCM_idCCM', 'tipo_area_idtipo_area'], 'required'],
+            [['tipo_evento_idtipo_evento', 'CCM_idCCM', 'tipo_area_idtipo_area'], 'required'],
             [['idevento', 'tipo_evento_idtipo_evento', 'CCM_idCCM', 'tipo_area_idtipo_area'], 'integer'],
-            [['nombre', 'descripcion'], 'string', 'max' => 45]
+            [['nombre'], 'string', 'max' => 45],
+            [['descripcion'], 'string', 'max' => 1000]
         ];
     }
 
@@ -50,12 +51,12 @@ class Evento extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idevento' => 'Idevento',
-            'nombre' => 'Nombre',
-            'descripcion' => 'Descripcion',
-            'tipo_evento_idtipo_evento' => 'Tipo Evento Idtipo Evento',
-            'CCM_idCCM' => 'Ccm Id Ccm',
-            'tipo_area_idtipo_area' => 'Tipo Area Idtipo Area',
+            'idevento' => 'ID Evento',
+            'nombre' => 'Evento',
+            'descripcion' => 'Descripción',
+            'tipo_evento_idtipo_evento' => 'Tipo Evento',
+            'CCM_idCCM' => 'CCM (Ciudad)',
+            'tipo_area_idtipo_area' => 'Tipo Area',
         ];
     }
 

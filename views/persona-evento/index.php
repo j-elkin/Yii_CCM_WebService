@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\PersonaEventoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Persona Eventos';
+$this->title = 'Personas en Eventos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="persona-evento-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Persona Evento', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Inscribir Persona a Evento', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,7 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'evento_idevento',
+            //'evento_idevento',
+            [
+                'attribute'=>'evento_idevento',
+                'value'=>'eventoIdevento.nombre',
+            ],
             'persona_idpersona',
 
             ['class' => 'yii\grid\ActionColumn'],

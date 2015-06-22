@@ -28,7 +28,7 @@ class TipoEvento extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idtipo_evento', 'tipo_evento'], 'required'],
+            [['tipo_evento'], 'required'],
             [['idtipo_evento'], 'integer'],
             [['tipo_evento'], 'string', 'max' => 45]
         ];
@@ -40,7 +40,7 @@ class TipoEvento extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idtipo_evento' => 'Idtipo Evento',
+            'idtipo_evento' => 'ID Tipo Evento',
             'tipo_evento' => 'Tipo Evento',
         ];
     }

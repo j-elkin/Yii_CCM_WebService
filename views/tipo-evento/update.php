@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\TipoEvento */
 
-$this->title = 'Update Tipo Evento: ' . ' ' . $model->idtipo_evento;
+$this->title = 'Actualizar Tipo Evento: ' . ' ' . $model->idtipo_evento;
 $this->params['breadcrumbs'][] = ['label' => 'Tipo Eventos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idtipo_evento, 'url' => ['view', 'id' => $model->idtipo_evento]];
 $this->params['breadcrumbs'][] = 'Update';

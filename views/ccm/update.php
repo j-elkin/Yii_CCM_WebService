@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Ccm */
 
-$this->title = 'Update Ccm: ' . ' ' . $model->idCCM;
+$this->title = 'Actualizar CCM: ' . ' ' . $model->idCCM;
 $this->params['breadcrumbs'][] = ['label' => 'Ccms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idCCM, 'url' => ['view', 'id' => $model->idCCM]];
 $this->params['breadcrumbs'][] = 'Update';

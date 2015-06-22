@@ -41,7 +41,7 @@ class TipoArea extends \yii\db\ActiveRecord
     {
         return [
             'idtipo_area' => 'ID del Area',
-            'tipo_area' => 'Nombre del Tipo Area',
+            'tipo_area' => 'Tipo Area',
         ];
     }
 

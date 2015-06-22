@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Ccm */
 
-$this->title = 'Create Ccm';
+$this->title = 'Crear CCM';
 $this->params['breadcrumbs'][] = ['label' => 'Ccms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

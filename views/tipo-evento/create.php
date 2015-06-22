@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\TipoEvento */
 
-$this->title = 'Create Tipo Evento';
+$this->title = 'Crear Tipo de Evento';
 $this->params['breadcrumbs'][] = ['label' => 'Tipo Eventos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -40,8 +40,8 @@ class PersonaEvento extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'evento_idevento' => 'Evento Idevento',
-            'persona_idpersona' => 'Persona Idpersona',
+            'evento_idevento' => 'Evento',
+            'persona_idpersona' => 'ID Persona',
         ];
     }
 
@@ -60,4 +60,6 @@ class PersonaEvento extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Persona::className(), ['docPersona' => 'persona_idpersona']);
     }
+
+
 }

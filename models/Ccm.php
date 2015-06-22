@@ -32,7 +32,7 @@ class Ccm extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idCCM', 'ciudad', 'direccion', 'telefono', 'fecha_inicio', 'fecha_fin'], 'required'],
+            [['ciudad', 'direccion', 'telefono', 'fecha_inicio', 'fecha_fin'], 'required'],
             [['idCCM'], 'integer'],
             [['fecha_inicio', 'fecha_fin'], 'safe'],
             [['ciudad', 'direccion', 'telefono'], 'string', 'max' => 45]
@@ -45,10 +45,10 @@ class Ccm extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idCCM' => 'Id Ccm',
+            'idCCM' => 'ID CCM',
             'ciudad' => 'Ciudad',
-            'direccion' => 'Direccion',
-            'telefono' => 'Telefono',
+            'direccion' => 'Dirección',
+            'telefono' => 'Teléfono',
             'fecha_inicio' => 'Fecha Inicio',
             'fecha_fin' => 'Fecha Fin',
         ];

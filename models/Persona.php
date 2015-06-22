@@ -183,4 +183,8 @@ class Persona extends \yii\db\ActiveRecord
         return false;
     }
 
+    public function getDocumentoNombre(){
+        return $this->docPersona.' - '.$this->nombre.' '.$this->apellidos;
+    }
+
 }

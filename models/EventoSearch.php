@@ -18,8 +18,8 @@ class EventoSearch extends Evento
     public function rules()
     {
         return [
-            [['idevento', 'tipo_evento_idtipo_evento', 'CCM_idCCM', 'tipo_area_idtipo_area'], 'integer'],
-            [['nombre', 'descripcion'], 'safe'],
+            [[ 'idevento'], 'integer'],
+            [['nombre', 'descripcion','tipo_evento_idtipo_evento', 'CCM_idCCM', 'tipo_area_idtipo_area'], 'safe'],
         ];
     }
 
@@ -55,15 +55,24 @@ class EventoSearch extends Evento
             return $dataProvider;
         }
 
+        //nuevo
+        $query->joinWith('tipoEventoIdtipoEvento');
+        $query->joinWith('cCMIdCCM');
+        $query->joinWith('tipoAreaIdtipoArea');
+
         $query->andFilterWhere([
             'idevento' => $this->idevento,
-            'tipo_evento_idtipo_evento' => $this->tipo_evento_idtipo_evento,
-            'CCM_idCCM' => $this->CCM_idCCM,
-            'tipo_area_idtipo_area' => $this->tipo_area_idtipo_area,
+            //'tipo_evento_idtipo_evento' => $this->tipo_evento_idtipo_evento,
+            //'CCM_idCCM' => $this->CCM_idCCM,
+            //'tipo_area_idtipo_area' => $this->tipo_area_idtipo_area,
         ]);
 
         $query->andFilterWhere(['like', 'nombre', $this->nombre])
-            ->andFilterWhere(['like', 'descripcion', $this->descripcion]);
+            ->andFilterWhere(['like', 'descripcion', $this->descripcion])
+            //nuevo para la busqueda por string
+            ->andFilterWhere(['like', 'tipo_evento.tipo_evento', $this->tipo_evento_idtipo_evento])
+            ->andFilterWhere(['like', 'ccm.ciudad', $this->CCM_idCCM])
+            ->andFilterWhere(['like', 'tipo_area.tipo_area', $this->tipo_area_idtipo_area]);
 
         return $dataProvider;
     }

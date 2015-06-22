@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Evento', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Evento', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -28,9 +28,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'idevento',
             'nombre',
             'descripcion',
-            'tipo_evento_idtipo_evento',
-            'CCM_idCCM',
-            // 'tipo_area_idtipo_area',
+            //'tipo_evento_idtipo_evento',
+            [
+                'attribute'=>'tipo_evento_idtipo_evento',
+                'value'=>'tipoEventoIdtipoEvento.tipo_evento',
+            ],
+            //'CCM_idCCM',
+            [
+                'attribute'=>'CCM_idCCM',
+                'value'=>'cCMIdCCM.ciudad',
+            ],
+            //'tipo_area_idtipo_area',
+            [
+                'attribute'=>'tipo_area_idtipo_area',
+                'value'=>'tipoAreaIdtipoArea.tipo_area',
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

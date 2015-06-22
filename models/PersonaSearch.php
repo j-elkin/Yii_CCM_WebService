@@ -76,7 +76,7 @@ class PersonaSearch extends Persona
             ->andFilterWhere(['like', 'correo_electronico', $this->correo_electronico])
             ->andFilterWhere(['like', 'telefono', $this->telefono])
             ->andFilterWhere(['like', 'codigo_qr', $this->codigo_qr])
-            //nuevo para la busqueda
+            //nuevo para la busqueda por string
             ->andFilterWhere(['like', 'tipo_doc.tipo_documento', $this->tipo_doc_idtipo_doc])//tipo_doc.tipo_documento (tabla y campo en BD)
             ->andFilterWhere(['like', 'pais_procedencia.nombre', $this->pais_procedencia_idpais_procedencia])
             ->andFilterWhere(['like', 'institucion.nombre', $this->institucion_idinstitucion])

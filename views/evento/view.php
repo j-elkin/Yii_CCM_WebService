@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->idevento], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->idevento], [
+        <?= Html::a('Actualizar', ['update', 'id' => $model->idevento], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Borrar', ['delete', 'id' => $model->idevento], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Realemente quiere borrar este evento?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -31,9 +31,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'idevento',
             'nombre',
             'descripcion',
-            'tipo_evento_idtipo_evento',
-            'CCM_idCCM',
-            'tipo_area_idtipo_area',
+            //'tipo_evento_idtipo_evento',
+            'tipoEventoIdtipoEvento.tipo_evento',
+            //'CCM_idCCM',
+            'cCMIdCCM.ciudad',
+            //'tipo_area_idtipo_area',
+            'tipoAreaIdtipoArea.tipo_area',
         ],
     ]) ?>
 

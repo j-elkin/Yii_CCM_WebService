@@ -18,7 +18,8 @@ class PersonaEventoSearch extends PersonaEvento
     public function rules()
     {
         return [
-            [['evento_idevento', 'persona_idpersona'], 'integer'],
+            [['persona_idpersona'], 'integer'],
+            [['evento_idevento'], 'safe'],
         ];
     }
 
@@ -54,10 +55,14 @@ class PersonaEventoSearch extends PersonaEvento
             return $dataProvider;
         }
 
+        $query->joinWith('eventoIdevento');
+
         $query->andFilterWhere([
-            'evento_idevento' => $this->evento_idevento,
+            //'evento_idevento' => $this->evento_idevento,
             'persona_idpersona' => $this->persona_idpersona,
         ]);
+
+        $query->andFilterWhere(['like', 'evento.nombre', $this->evento_idevento]);
 
         return $dataProvider;
     }
