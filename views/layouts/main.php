@@ -5,6 +5,8 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
+//use yii\widgets\Menu;//Importante para los menus
+
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -18,6 +20,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel="icon" href="../views/images/logo.jpg">
     <?php $this->head() ?>
 </head>
 <body>
@@ -26,24 +29,62 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                //'encodeLabels' => false,
+                'brandLabel' => '<span class="glyphicon glyphicon-home"></span> CONGRESO COLOMBIANO DE MATEMÁTICAS',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
             echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
+            //echo Menu::widget([
+                'encodeLabels' => false,//importante para mostrar los iconos
+                'options' => [
+                    'class' => 'navbar-nav navbar-right',
+                    'data-tag' => 'yii2-menu',
+                ],
                 'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                    ['label' => 'Contact', 'url' => ['/site/contact']],
+                    //['label' => 'Home', 'url' => ['/site/index']],
+                    //['label' => 'About', 'url' => ['/site/about']],
+                    //['label' => 'Contact', 'url' => ['/site/contact']],
+                    ['label' => '<span class="glyphicon glyphicon-list-alt"></span> Inscripciones', 'url' => ['/persona-evento/index']],
+                    
+                    ['label' => 'Personas',  'items' => [
+                        ['label' => 'Persona', 'url' => ['/persona/index']],
+                        ['label' => 'Almuerzo', 'url' => '#'],                    
+                    ]],
+
+                    ['label' => 'Eventos', 'items'=> [
+                        ['label' => 'Evento', 'url' => ['/evento/index']],
+                        ['label' => 'Ubicación', 'url' => ['/ubicacion/index']],
+                        ['label' => 'Memoria', 'url' => ['/memoria/index']],
+                    ]],
+
+
+
+                    ['label' => 'Administración', 'items' => [
+
+                        ['label' => 'CCM', 'url' => ['/ccm/index']],
+                        '<li class="divider"></li>',
+                        ['label' => 'Tipo Área', 'url' => ['/tipo-area/index']],
+                        ['label' => 'Tipo Evento', 'url' => ['/tipo-evento/index']],
+                        
+                        '<li class="divider"></li>',
+                        ['label' => 'Institución', 'url' => ['/institucion/index']],
+                        ['label' => 'País de Procedencia', 'url' => ['/pais-procedencia/index']],
+                        ['label' => 'Tipo Documento', 'url' => ['/tipo-doc/index']],
+                        ['label' => 'Tipo Persona', 'url' => ['/tipo-persona/index']],
+
+                    ]],
+
                     Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :
                         ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                             'url' => ['/site/logout'],
                             'linkOptions' => ['data-method' => 'post']],
                 ],
+                //'activeCssClass'=>'activeclass',
+
             ]);
             NavBar::end();
         ?>
@@ -58,8 +99,9 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-            <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-            <p class="pull-right"><?= Yii::powered() ?></p>
+            <!-- <p class="pull-left">&copy; Congreso Colombiano de Matemáticas <?= date('Y') ?></p> -->
+            <p class="pull-left">Congreso Colombiano de Matemáticas <?= date('Y') ?></p>
+            <!-- <p class="pull-right"><?= Yii::powered() ?></p> -->
         </div>
     </footer>
 

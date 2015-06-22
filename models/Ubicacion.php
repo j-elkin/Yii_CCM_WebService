@@ -32,7 +32,7 @@ class Ubicacion extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idubicacion', 'hora_inicio', 'hora_fin', 'lugar', 'evento_idevento'], 'required'],
+            [['hora_inicio', 'hora_fin', 'lugar', 'evento_idevento'], 'required'],
             [['idubicacion', 'evento_idevento'], 'integer'],
             [['hora_inicio', 'hora_fin', 'fecha'], 'safe'],
             [['lugar'], 'string', 'max' => 45]
