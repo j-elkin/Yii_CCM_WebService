@@ -2,5 +2,7 @@
 
 return [
     'adminEmail' => 'admin@example.com',
-    'uploadPath' => '/web/uploads',
+    //'uploadPath' => Yii::$app->basePath.'uploads/',
+    'uploadPath' => 'uploads/',
+    //'uploadUrl' => Yii::$app->urlManager->baseUrl.'uploads/',
 ];

@@ -1,7 +1,7 @@
 <?php
 
 namespace app\models;
-
+use yii\helpers\Html;
 use Yii;
 
 /**
@@ -33,7 +33,9 @@ class Persona extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public $file_qr;    
+    public $file_qr;
+    //nombre del archivo generado en el servidor
+    public $image_file;
     public static function tableName()
     {
         return 'persona';
@@ -131,4 +133,54 @@ class Persona extends \yii\db\ActiveRecord
     {
         return $this->hasOne(TipoPersona::className(), ['idtipo_persona' => 'tipo_persona_idtipo_persona']);
     }
+
+
+    const IMAGE_PLACEHOLDER = 'uploads/codigo_qr_question.jpg';
+ 
+    public function getDisplayImage() {
+        $model=$this;//Actualizando el modelo
+        if (empty($model->codigo_qr)) {
+            // if you do not want a placeholder
+            $image = null;
+     
+            // else if you want to display a placeholder
+            $image = Html::img(self::IMAGE_PLACEHOLDER, [
+                'alt'=>Yii::t('app', 'No se dispone de QR'),
+                'title'=>Yii::t('app', 'Sin asignar código QR'),
+                //'class'=>'img-thumbnail'
+                // add a CSS class to make your image styling consistent
+            ]);
+        }
+        else {
+           $image = Html::img(Yii::$app->urlManager->baseUrl . '/' . $model->codigo_qr, [
+           //$image = Html::img($model->codigo_qr, [
+                'alt'=>Yii::t('app', 'No existe el archivo de código QR para ') . $model->docPersona,
+                'title'=>Yii::t('app', 'Código QR ').$model->docPersona,
+                'width'=>'220',
+                //'class'=>'img-thumbnail'
+                // add a CSS class to make your image styling consistent
+            ]);
+        }
+     
+        // enclose in a container if you wish with appropriate styles
+        return ($image == null) ? null : 
+            //Html::tag('div', $image, ['class' => 'file-preview-frame']); 
+            $image;
+    }
+
+
+    public function deleteImage() {
+        //." basePath: ".Yii::$app->basePath."\web\uploads\\"
+        $qr = $this->codigo_qr;
+
+        //$image = Yii::$app->basePath . '/web/' . $this->codigo_qr;
+        $image = '../web/' . $this->codigo_qr;
+        if (unlink($image)) {
+            //$this->codigo_qr = null;
+            //$this->save();
+            return true;
+        }
+        return false;
+    }
+
 }

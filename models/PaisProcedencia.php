@@ -39,7 +39,7 @@ class PaisProcedencia extends \yii\db\ActiveRecord
     {
         return [
             'idpais_procedencia' => 'ID País de Procedencia',
-            'nombre' => 'Nombre',
+            'nombre' => 'País',
         ];
     }
 

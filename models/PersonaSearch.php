@@ -17,9 +17,10 @@ class PersonaSearch extends Persona
      */
     public function rules()
     {
-        return [
-            [['docPersona', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'integer'],
-            [['nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'telefono', 'codigo_qr'], 'safe'],
+        return [//tipo_doc_idtipo_doc exigia antes tipo integer
+            [['docPersona'], 'integer'],
+            [['nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'telefono', 'codigo_qr', 
+            'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'safe'],
         ];
     }
 
@@ -54,13 +55,18 @@ class PersonaSearch extends Persona
             // $query->where('0=1');
             return $dataProvider;
         }
+        //nuevo
+        $query->joinWith('tipoDocIdtipoDoc');
+        $query->joinWith('paisProcedenciaIdpaisProcedencia');
+        $query->joinWith('institucionIdinstitucion');
+        $query->joinWith('tipoPersonaIdtipoPersona');
 
         $query->andFilterWhere([
             'docPersona' => $this->docPersona,
-            'tipo_doc_idtipo_doc' => $this->tipo_doc_idtipo_doc,
-            'pais_procedencia_idpais_procedencia' => $this->pais_procedencia_idpais_procedencia,
-            'institucion_idinstitucion' => $this->institucion_idinstitucion,
-            'tipo_persona_idtipo_persona' => $this->tipo_persona_idtipo_persona,
+            //'tipo_doc_idtipo_doc' => $this->tipo_doc_idtipo_doc, //Ya no se busca por id (integer)
+            //'pais_procedencia_idpais_procedencia' => $this->pais_procedencia_idpais_procedencia,
+            //'institucion_idinstitucion' => $this->institucion_idinstitucion,
+            //'tipo_persona_idtipo_persona' => $this->tipo_persona_idtipo_persona,
         ]);
 
         $query->andFilterWhere(['like', 'nombre', $this->nombre])
@@ -69,8 +75,12 @@ class PersonaSearch extends Persona
             ->andFilterWhere(['like', 'fecha_nacimiento', $this->fecha_nacimiento])
             ->andFilterWhere(['like', 'correo_electronico', $this->correo_electronico])
             ->andFilterWhere(['like', 'telefono', $this->telefono])
-            ->andFilterWhere(['like', 'codigo_qr', $this->codigo_qr]);
-
+            ->andFilterWhere(['like', 'codigo_qr', $this->codigo_qr])
+            //nuevo para la busqueda
+            ->andFilterWhere(['like', 'tipo_doc.tipo_documento', $this->tipo_doc_idtipo_doc])//tipo_doc.tipo_documento (tabla y campo en BD)
+            ->andFilterWhere(['like', 'pais_procedencia.nombre', $this->pais_procedencia_idpais_procedencia])
+            ->andFilterWhere(['like', 'institucion.nombre', $this->institucion_idinstitucion])
+            ->andFilterWhere(['like', 'tipo_persona.tipo_persona', $this->tipo_persona_idtipo_persona]);
         return $dataProvider;
     }
 }

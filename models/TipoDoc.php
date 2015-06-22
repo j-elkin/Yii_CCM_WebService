@@ -41,7 +41,7 @@ class TipoDoc extends \yii\db\ActiveRecord
     {
         return [
             'idtipo_doc' => 'ID del Tipo de Documento',
-            'tipo_documento' => 'Nombre del Tipo Documento',
+            'tipo_documento' => 'Tipo Documento',
         ];
     }
 

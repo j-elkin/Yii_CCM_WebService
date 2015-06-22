@@ -41,7 +41,7 @@ class TipoPersona extends \yii\db\ActiveRecord
     {
         return [
             'idtipo_persona' => 'ID del Tipo Persona',
-            'tipo_persona' => 'Nombre del Tipo Persona',
+            'tipo_persona' => 'Tipo Persona',
         ];
     }
 

@@ -43,7 +43,7 @@ class Institucion extends \yii\db\ActiveRecord
     {
         return [
             'idinstitucion' => 'ID de la Institución',
-            'nombre' => 'Nombre',
+            'nombre' => 'Institución',
             'pais' => 'Pais',
             'ciudad' => 'Ciudad',
         ];

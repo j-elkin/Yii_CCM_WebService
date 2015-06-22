@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Borrar', ['delete', 'id' => $model->docPersona], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Realemente quiere borrar esta persona?',
+                'confirm' => 'Realmente quiere borrar esta persona?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -35,12 +35,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_nacimiento',
             'correo_electronico',
             'telefono',
-            'codigo_qr',
-            'tipo_doc_idtipo_doc',
-            'pais_procedencia_idpais_procedencia',
-            'institucion_idinstitucion',
-            'tipo_persona_idtipo_persona',
+            //'codigo_qr',
+            //'displayImage',
+            'tipoDocIdtipoDoc.tipo_documento',
+            'paisProcedenciaIdpaisProcedencia.nombre',
+            'institucionIdinstitucion.nombre',
+            'tipoPersonaIdtipoPersona.tipo_persona',
         ],
     ]) ?>
 
+    <?php
+        echo $model->displayImage;
+    ?>
+
 </div>
+

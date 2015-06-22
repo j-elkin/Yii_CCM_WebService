@@ -74,7 +74,7 @@ class PersonaController extends Controller
             //Guardando el path en el campo codigo_qr de la BD
             $model->codigo_qr = 'uploads/'.$QrName.'.'.$model->file_qr->extension;
             $model->save();
-
+            //guardando el archivo en el servidor
             $model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
 
             return $this->redirect(['view', 'id' => $model->docPersona]);
@@ -83,18 +83,6 @@ class PersonaController extends Controller
                 'model' => $model,
             ]);
         }
-    }
-
-    /**
-    * Nuevo
-    * Muestra el asset como un blob
-    * @param integer $docPersona
-    * @return mixed
-    */
-    public function actionGet($id){
-        $model=$this->findModel($id);
-        header('Content-type: '.$model->contentType);
-        echo $model->file->getBytes();
     }
 
     
@@ -108,9 +96,39 @@ class PersonaController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->docPersona]);
-        } else {
+        $nuevo_qr = UploadedFile::getInstance($model, 'file_qr');
+
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            if (!empty($nuevo_qr) ) {
+
+                if($model->codigo_qr!=null){
+                    //borra el antiguo QR
+                    $this->findModel($id)->deleteImage();
+                }
+
+                //Obtener la instancia del nuevo QR subido
+                $model->file_qr = UploadedFile::getInstance($model, 'file_qr');
+                $QrName = $model->docPersona;
+                
+                //$model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
+
+                //Guardando el path en el campo codigo_qr de la BD
+                $model->codigo_qr = 'uploads/'.$QrName.'.'.$model->file_qr->extension;
+                $model->save();
+                //guardando el archivo en el servidor
+                $model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
+
+                return $this->redirect(['view', 'id' => $model->docPersona]);
+            }
+            else{
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->docPersona]);
+            }
+
+            
+        }
+         else {
             return $this->render('update', [
                 'model' => $model,
             ]);
@@ -125,8 +143,9 @@ class PersonaController extends Controller
      */
     public function actionDelete($id)
     {
+        $this->findModel($id)->deleteImage();
         $this->findModel($id)->delete();
-
+        
         return $this->redirect(['index']);
     }
 
