@@ -29,18 +29,7 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Seleccione género']
     ) ?>
 
-    <?= $form->field($model, 'fecha_nacimiento')->widget(
-        DatePicker::className(), [
-            // inline too, not bad
-            'language' => 'es',
-             'inline' => true, 
-             // modify template for custom rendering
-            'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
-            'clientOptions' => [
-                'autoclose' => true,
-                'format' => 'dd-M-yyyy'
-            ]
-    ]);?>
+    
  
 
     <?= $form->field($model, 'correo_electronico')->input('email') ?>
@@ -69,6 +58,19 @@ use dosamigos\datepicker\DatePicker;
         ArrayHelper::map(TipoPersona::find()->all(),'idtipo_persona','tipo_persona'),
         ['prompt'=>'Seleccione persona']
     ) ?>
+
+    <?= $form->field($model, 'fecha_nacimiento')->widget(
+        DatePicker::className(), [
+            // inline too, not bad
+            'language' => 'es',
+             'inline' => true, 
+             // modify template for custom rendering
+            'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+            'clientOptions' => [
+                'autoclose' => true,
+                'format' => 'yyyy-mm-dd'
+            ]
+    ]);?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

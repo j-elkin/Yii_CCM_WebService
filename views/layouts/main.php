@@ -30,7 +30,7 @@ AppAsset::register($this);
         <?php
             NavBar::begin([
                 //'encodeLabels' => false,
-                'brandLabel' => '<span class="glyphicon glyphicon-home"></span> CONGRESO COLOMBIANO DE MATEMÁTICAS',
+                'brandLabel' => '<span class="glyphicon glyphicon-home"></span> XX CONGRESO COLOMBIANO DE MATEMÁTICAS',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -77,11 +77,12 @@ AppAsset::register($this);
 
                     ]],
 
-                    Yii::$app->user->isGuest ?
+                    //login
+                    /*Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :
                         ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                             'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
+                            'linkOptions' => ['data-method' => 'post']],*/
                 ],
                 //'activeCssClass'=>'activeclass',
 

@@ -2,7 +2,7 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
-$this->title = 'Congreso Colombiano de Matemáticas';
+$this->title = 'XX Congreso Colombiano de Matemáticas';
 
 ?>
 
@@ -79,4 +79,27 @@ $this->title = 'Congreso Colombiano de Matemáticas';
         <br><br><br>
       </div>
       <!--imagenes-->
+
+      <!--Abre footer-->
+    <div class="container marketing">
+      <div class="row">
+        <div class="col-lg-4">
+            <div align="center"><img class="img-circle" src="../views/images/logo.jpg" style="width: 140px; height: 140px;"></div><h4>CCM en Facebook</h4>
+            <p>Siguenos en Facebook...</p>
+            <div align="center"><p><a class="btn btn-default" href="https://www.facebook.com/ccm2015" role="button">Ver Más»</a></p></div>
+        </div>
+        <div class="col-lg-4">
+          <div align="center"><img class="img-circle" src="../views/images/logo.jpg" style="width: 140px; height: 140px;"></div><h4>XX Congreso Colombiano de Matemáticas.</h4>
+          <p>El evento espera contar con la presencia de conferencistas e investigadores nacionales e internacionales...</p>
+          <div align="center"><p><a class="btn btn-default" href="http://www.xxcongresocolombianodematematicas.co/index.php/" role="button">Ver Más»</a></p></div>         
+        </div> 
+        
+        <div class="col-lg-4">
+          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Universidad Nacional de Colombia</h4>
+          <p>Unversidad Nacional de Colombia una de las mejores 100 de latinoamérica...</p>
+          <div align="center"><p><a class="btn btn-default" href="http://unal.edu.co/" role="button">Ver Más»</a></p></div>         
+        </div> 
+      </div><br><br>
+    </div>
+  <!--Cierra footer-->
 </div>
