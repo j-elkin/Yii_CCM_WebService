@@ -88,6 +88,7 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
             <p>El logotipo de la Sociedad Colombiana de Matemáticas fue diseñado por el maestro colombiano ANTONIO GRASS, conocido estudioso del arte pre-hispánico...</p>
             <div align="center"><p><a class="btn btn-default" href="http://www.scm.org.co/" role="button">Ver Más»</a></p></div>
         </div>
+        
         <div class="col-lg-4">
           <div align="center"><img class="img-circle" src="../views/images/logo.jpg" style="width: 140px; height: 140px;"></div><h4>XX Congreso Colombiano de Matemáticas.</h4>
           <p>El evento espera contar con la presencia de conferencistas e investigadores nacionales e internacionales...</p>
@@ -95,9 +96,15 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
         </div> 
         
         <div class="col-lg-4">
-          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Universidad Nacional de Colombia</h4>
+          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Universidad Nacional de Colombia Sede Manizales</h4>
           <p>Unversidad Nacional de Colombia una de las mejores 100 de latinoamérica...</p>
-          <div align="center"><p><a class="btn btn-default" href="http://unal.edu.co/" role="button">Ver Más»</a></p></div>         
+          <div align="center"><p><a class="btn btn-default" href="http://www.manizales.unal.edu.co/" role="button">Ver Más»</a></p></div>         
+        </div> 
+
+        <div class="col-lg-4">
+          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Universidad Nacional de Colombia Sede Manizales</h4>
+          <p>Facultad de Ciencias Exactas y Naturales</p>
+          <div align="center"><p><a class="btn btn-default" href="http://www.fcen.unal.edu.co/" role="button">Ver Más»</a></p></div>         
         </div> 
       </div><br><br>
     </div>
