@@ -51,7 +51,8 @@ class Memoria extends \yii\db\ActiveRecord
             [['idmemoria', 'evento_idevento'], 'integer'],
             [['archivo'], 'string'],
             [['archivo_memoria'], 'file', 'extensions' => 'pdf'],
-            [['nombre', 'descripcion'], 'string', 'max' => 45]
+            [['nombre'], 'string', 'max' => 45],
+            [['descripcion'], 'string', 'max' => 1000]
         ];
     }
 
