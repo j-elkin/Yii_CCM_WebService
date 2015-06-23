@@ -18,8 +18,8 @@ class UbicacionSearch extends Ubicacion
     public function rules()
     {
         return [
-            [['idubicacion', 'evento_idevento'], 'integer'],
-            [['hora_inicio', 'hora_fin', 'lugar', 'fecha'], 'safe'],
+            [['idubicacion'], 'integer'],
+            [['hora_inicio', 'hora_fin', 'lugar', 'fecha', 'evento_idevento'], 'safe'],
         ];
     }
 
@@ -54,16 +54,19 @@ class UbicacionSearch extends Ubicacion
             // $query->where('0=1');
             return $dataProvider;
         }
+        //nuevo
+        $query->joinWith('eventoIdevento');
 
         $query->andFilterWhere([
             'idubicacion' => $this->idubicacion,
             'hora_inicio' => $this->hora_inicio,
             'hora_fin' => $this->hora_fin,
             'fecha' => $this->fecha,
-            'evento_idevento' => $this->evento_idevento,
+            //'evento_idevento' => $this->evento_idevento,
         ]);
 
-        $query->andFilterWhere(['like', 'lugar', $this->lugar]);
+        $query->andFilterWhere(['like', 'lugar', $this->lugar])
+            ->andFilterWhere(['like', 'evento.nombre', $this->evento_idevento]);
 
         return $dataProvider;
     }

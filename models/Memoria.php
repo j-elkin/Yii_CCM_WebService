@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "memoria".
@@ -20,6 +21,8 @@ class Memoria extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+    public $archivo_memoria;
     public static function tableName()
     {
         return 'memoria';
@@ -30,13 +33,28 @@ class Memoria extends \yii\db\ActiveRecord
      */
     public function rules()
     {
+        /* return [
+             [['nombre', 'archivo', 'evento_idevento', 'archivo_memoria'], 'required'],
+             [['idmemoria', 'evento_idevento'], 'integer'],
+             [['archivo'], 'string'],
+             [['archivo_memoria'], 'file', 'extensions' => 'pdf'],
+             [['nombre', 'descripcion'], 'string', 'max' => 45]
+         ];*/
+
+        // A continuación lo que se hace es definir escenarios para aplicar las reglas.
+        // Esto se tuvo que hacer, porque el campo de archivo para la tabla memoria es obligatorio
+        // entonces para cuando se crea una memoria se exige que se cargue un archivo desde el formulario
+        // pero para cuando se actualice una memoria se tiene que quitar esta regla, pues puede que no se cambie el archivo
         return [
-            [['idmemoria', 'nombre', 'archivo', 'evento_idevento'], 'required'],
+            [['nombre', 'archivo', 'evento_idevento', 'archivo_memoria'], 'required', 'on' => 'registro'],
+            [['nombre', 'evento_idevento'], 'required', 'on' => 'actualiza'],
             [['idmemoria', 'evento_idevento'], 'integer'],
             [['archivo'], 'string'],
+            [['archivo_memoria'], 'file', 'extensions' => 'pdf'],
             [['nombre', 'descripcion'], 'string', 'max' => 45]
         ];
     }
+
 
     /**
      * @inheritdoc
@@ -44,9 +62,9 @@ class Memoria extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idmemoria' => 'Idmemoria',
+            'idmemoria' => 'ID Memoria',
             'nombre' => 'Nombre',
-            'descripcion' => 'Descripcion',
+            'descripcion' => 'Descripción',
             'archivo' => 'Archivo',
             'evento_idevento' => 'Evento Idevento',
         ];
@@ -59,4 +77,41 @@ class Memoria extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Evento::className(), ['idevento' => 'evento_idevento']);
     }
+
+
+    /**
+    * Obtiene el archivo almacenado en el campo de la tabla memoria, para entregarlo con posiblidad de descargarlo
+    * @return $file_memo el archivo en etiquera <a href> para ser descargado
+    */
+    //public function getArchivoMemoria($modelo){
+    public function getArchivoMemoria(){
+        $model = $this; //actualizando el modelo
+        //$model=$modelo; //actualizando el modelo   -->   se hizo para generalizar, llamando desde view.php pero ya no funciono llamando desde index.php
+               
+        $file_memo = null;
+
+        //$file_memo = Html::a($model->archivo, Yii::$app->urlManager->baseUrl . '/memorias/' . $model->archivo, [
+        $file_memo = Html::a($model->archivo, 'download.php?filename='.$model->archivo, [
+                'alt'=>Yii::t('app', 'Archivo memoria '),
+                'title'=>Yii::t('app', 'Descargar memoria'),
+            ]);
+
+        
+        return $file_memo;
+    }
+
+    /**
+    * Borra un archivo de memoria del servidor
+    */
+    public function deleteArchivoMemoria(){
+       //$image = Yii::$app->basePath . '/web/' . $this->codigo_qr;
+        $memo = '../web/memorias/' . $this->archivo;
+        if (unlink($memo)) {
+            //$this->codigo_qr = null;
+            //$this->save();
+            return true;
+        }
+        return false;
+    }
+
 }

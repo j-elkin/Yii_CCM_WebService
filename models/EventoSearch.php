@@ -67,8 +67,8 @@ class EventoSearch extends Evento
             //'tipo_area_idtipo_area' => $this->tipo_area_idtipo_area,
         ]);
 
-        $query->andFilterWhere(['like', 'nombre', $this->nombre])
-            ->andFilterWhere(['like', 'descripcion', $this->descripcion])
+        $query->andFilterWhere(['like', 'evento.nombre', $this->nombre])
+            ->andFilterWhere(['like', 'evento.descripcion', $this->descripcion])
             //nuevo para la busqueda por string
             ->andFilterWhere(['like', 'tipo_evento.tipo_evento', $this->tipo_evento_idtipo_evento])
             ->andFilterWhere(['like', 'ccm.ciudad', $this->CCM_idCCM])

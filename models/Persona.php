@@ -4,6 +4,7 @@ namespace app\models;
 use yii\helpers\Html;
 use Yii;
 
+
 /**
  * This is the model class for table "persona".
  *
@@ -136,9 +137,13 @@ class Persona extends \yii\db\ActiveRecord
 
 
     const IMAGE_PLACEHOLDER = 'uploads/codigo_qr_question.jpg';
- 
-    public function getDisplayImage() {
-        $model=$this;//Actualizando el modelo
+     /**
+     * Obtiene la imagen almacenada en la BD para su visualización
+     * @return $image
+     */
+    public function getDisplayImage($modelo) {
+        //$model=$this;//Actualizando el modelo
+        $model=$modelo;//Actualizando el modelo
         if (empty($model->codigo_qr)) {
             // if you do not want a placeholder
             $image = null;
@@ -168,10 +173,12 @@ class Persona extends \yii\db\ActiveRecord
             $image;
     }
 
-
+    /**
+    * Borra un archivo de código QR del servidor
+    */
     public function deleteImage() {
         //." basePath: ".Yii::$app->basePath."\web\uploads\\"
-        $qr = $this->codigo_qr;
+        //$qr = $this->codigo_qr;
 
         //$image = Yii::$app->basePath . '/web/' . $this->codigo_qr;
         $image = '../web/' . $this->codigo_qr;
@@ -183,8 +190,13 @@ class Persona extends \yii\db\ActiveRecord
         return false;
     }
 
+    /**
+    * Se encarga de crear una cadena compuesta por el documento, nombre y apellidos de la persona
+    * @return la cadena
+    */
     public function getDocumentoNombre(){
         return $this->docPersona.' - '.$this->nombre.' '.$this->apellidos;
+        
     }
 
 }

@@ -8,6 +8,7 @@ use app\models\MemoriaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * MemoriaController implements the CRUD actions for Memoria model.
@@ -61,8 +62,27 @@ class MemoriaController extends Controller
     public function actionCreate()
     {
         $model = new Memoria();
+        //APLICANDO SCENARIOS PARA LAS REGLAS DE VALIDACIÓN
+        $model->scenario = 'registro';
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            //Obtener la instancia del archivo subido
+            $model->archivo_memoria = UploadedFile::getInstance($model, 'archivo_memoria');
+
+            //Obteniendo el siguiente ID desde la BD
+            $id = Memoria::find()->select('max(idmemoria)')->scalar() ;
+            $id++;
+
+            $nombre = $model->archivo_memoria->name;
+            $nombre = $id.'_'.$nombre;
+            //Guardando el nombre del archivo memoria en el campo archivo de la tabla memoria de la BD
+            $model->archivo = $nombre;
+            $model->save();
+
+            //guardando el archivo en el servidor
+            $model->archivo_memoria->saveAs('memorias/'.$nombre);
+
             return $this->redirect(['view', 'id' => $model->idmemoria]);
         } else {
             return $this->render('create', [
@@ -80,9 +100,38 @@ class MemoriaController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        //aplicando scenario de reglas de validación del formulario. Acá ya no se debe de exigir el archivo
+        $model->scenario = 'actualiza';
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idmemoria]);
+        $nueva_memoria = UploadedFile::getInstance($model, 'archivo_memoria');
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            if(!empty($nueva_memoria) ){//Se ha cargado un nuevo archivo de memoria
+                //Borra el antiguo archivo de memoria
+                $model->deleteArchivoMemoria();
+                
+                //Obtener la instancia del archivo subido
+                $model->archivo_memoria = UploadedFile::getInstance($model, 'archivo_memoria');
+                //obtiene el id de la BD
+                $id = $model->idmemoria;
+                $nombre = $model->archivo_memoria->name;
+                $nombre = $id.'_'.$nombre;
+                //Guardando el nombre del archivo memoria en el campo archivo de la tabla memoria de la BD
+                $model->archivo = $nombre;
+                $model->save();
+
+                //guardando el archivo en el servidor
+                $model->archivo_memoria->saveAs('memorias/'.$nombre);
+
+                return $this->redirect(['view', 'id' => $model->idmemoria]);
+            }
+            else{//no se cargo un archivo
+                $model->save();
+
+                return $this->redirect(['view', 'id' => $model->idmemoria]);
+            }
+
+            
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -98,6 +147,7 @@ class MemoriaController extends Controller
      */
     public function actionDelete($id)
     {
+        $this->findModel($id)->deleteArchivoMemoria();
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

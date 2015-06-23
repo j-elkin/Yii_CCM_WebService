@@ -55,12 +55,13 @@ class PersonaSearch extends Persona
             // $query->where('0=1');
             return $dataProvider;
         }
+        
         //nuevo
         $query->joinWith('tipoDocIdtipoDoc');
         $query->joinWith('paisProcedenciaIdpaisProcedencia');
         $query->joinWith('institucionIdinstitucion');
         $query->joinWith('tipoPersonaIdtipoPersona');
-
+        
         $query->andFilterWhere([
             'docPersona' => $this->docPersona,
             //'tipo_doc_idtipo_doc' => $this->tipo_doc_idtipo_doc, //Ya no se busca por id (integer)
@@ -69,7 +70,11 @@ class PersonaSearch extends Persona
             //'tipo_persona_idtipo_persona' => $this->tipo_persona_idtipo_persona,
         ]);
 
-        $query->andFilterWhere(['like', 'nombre', $this->nombre])
+
+        
+
+
+        $query->andFilterWhere(['like', 'persona.nombre', $this->nombre])
             ->andFilterWhere(['like', 'apellidos', $this->apellidos])
             ->andFilterWhere(['like', 'genero', $this->genero])
             ->andFilterWhere(['like', 'fecha_nacimiento', $this->fecha_nacimiento])
@@ -81,6 +86,9 @@ class PersonaSearch extends Persona
             ->andFilterWhere(['like', 'pais_procedencia.nombre', $this->pais_procedencia_idpais_procedencia])
             ->andFilterWhere(['like', 'institucion.nombre', $this->institucion_idinstitucion])
             ->andFilterWhere(['like', 'tipo_persona.tipo_persona', $this->tipo_persona_idtipo_persona]);
+
+            
+
         return $dataProvider;
     }
 }

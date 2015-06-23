@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+//use app\models\Memoria;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Memoria */
@@ -15,11 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->idmemoria], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->idmemoria], [
+        <?= Html::a('Actualizar', ['update', 'id' => $model->idmemoria], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Borrar', ['delete', 'id' => $model->idmemoria], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Realmente quiere borrar esta memoria?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -31,8 +32,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'idmemoria',
             'nombre',
             'descripcion',
-            'archivo',
-            'evento_idevento',
+            //'archivo',
+            //'archivoMemoria',//Funcion de Memoria.php
+           [   
+                'attribute' => 'Archivo Memoria',
+                'format' => 'raw',
+                'value' => Html::a($model->archivo, 'download.php?filename='.$model->archivo, [
+                            'alt'=>Yii::t('app', 'Archivo memoria '),
+                            'title'=>Yii::t('app', 'Descargar memoria'),
+                        ]),
+            ],
+             /*[   
+                'label' => 'Archivo Memoria',
+                'format' => 'raw',
+                'value' => Memoria::getArchivoMemoria($model),
+            ],*/
+            'eventoIdevento.nombre',
         ],
     ]) ?>
 

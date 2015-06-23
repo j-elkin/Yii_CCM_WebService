@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\Persona;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Persona */
@@ -41,12 +42,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'paisProcedenciaIdpaisProcedencia.nombre',
             'institucionIdinstitucion.nombre',
             'tipoPersonaIdtipoPersona.tipo_persona',
+            /*[   
+                'label' => 'Código QR',
+                'format' => 'raw',
+                'value' => 'displayImage',
+            ],*/
+            [   
+                'label' => 'Código QR',
+                'format' => 'raw',
+                'value' => Persona::getDisplayImage($model),
+            ],
         ],
     ]) ?>
 
-    <?php
-        echo $model->displayImage;
-    ?>
+   <!--  <?php
+        //echo $model->displayImage;
+    ?> -->
 
 </div>
 

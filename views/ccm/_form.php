@@ -24,6 +24,7 @@ use dosamigos\datepicker\DatePicker;
     <?= $form->field($model, 'fecha_inicio')->widget(
         DatePicker::className(), [
             // inline too, not bad
+            'language' => 'es',
              'inline' => true, 
              // modify template for custom rendering
             'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
@@ -36,6 +37,7 @@ use dosamigos\datepicker\DatePicker;
     <?= $form->field($model, 'fecha_fin')->widget(
         DatePicker::className(), [
             // inline too, not bad
+            'language' => 'es',
              'inline' => true, 
              // modify template for custom rendering
             'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',

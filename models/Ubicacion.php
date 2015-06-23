@@ -45,12 +45,12 @@ class Ubicacion extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idubicacion' => 'Idubicacion',
+            'idubicacion' => 'ID Ubicación',
             'hora_inicio' => 'Hora Inicio',
             'hora_fin' => 'Hora Fin',
             'lugar' => 'Lugar',
             'fecha' => 'Fecha',
-            'evento_idevento' => 'Evento Idevento',
+            'evento_idevento' => 'Evento',
         ];
     }
 

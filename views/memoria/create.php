@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Memoria */
 
-$this->title = 'Create Memoria';
+$this->title = 'Crear Memoria';
 $this->params['breadcrumbs'][] = ['label' => 'Memorias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

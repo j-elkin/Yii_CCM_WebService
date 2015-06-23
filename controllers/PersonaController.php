@@ -59,7 +59,7 @@ class PersonaController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public $file_qr;
+    //public $file_qr;
     public function actionCreate()
     {
         $model = new Persona();
@@ -71,11 +71,18 @@ class PersonaController extends Controller
             $model->file_qr = UploadedFile::getInstance($model, 'file_qr');
             //$model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
 
-            //Guardando el path en el campo codigo_qr de la BD
-            $model->codigo_qr = 'uploads/'.$QrName.'.'.$model->file_qr->extension;
-            $model->save();
-            //guardando el archivo en el servidor
-            $model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
+            if(!empty($model->file_qr)){ //Se ha cargado código qr para la persona
+
+                //Guardando el path en el campo codigo_qr de la BD
+                $model->codigo_qr = 'uploads/'.$QrName.'.'.$model->file_qr->extension;
+                $model->save();
+                //guardando el archivo en el servidor
+                $model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
+            }
+            else{
+                $model->codigo_qr = null;
+                $model->save();
+            }
 
             return $this->redirect(['view', 'id' => $model->docPersona]);
         } else {

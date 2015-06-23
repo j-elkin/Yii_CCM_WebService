@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-
+use app\models\Persona;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\PersonaEvento */
@@ -31,9 +31,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             //'evento_idevento',
             'eventoIdevento.nombre',
-            //'persona_idpersona',
-            'personaIdpersona.documentoNombre',
+            'persona_idpersona',
+            //'personaIdpersona.documentoNombre',
+            'personaIdpersona.nombre',
+            'personaIdpersona.apellidos',
+            
         ],
+        
     ]) ?>
 
 </div>

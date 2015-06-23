@@ -18,8 +18,8 @@ class MemoriaSearch extends Memoria
     public function rules()
     {
         return [
-            [['idmemoria', 'evento_idevento'], 'integer'],
-            [['nombre', 'descripcion', 'archivo'], 'safe'],
+            [['idmemoria'], 'integer'],
+            [['nombre', 'descripcion', 'archivo', 'evento_idevento'], 'safe'],
         ];
     }
 
@@ -55,14 +55,17 @@ class MemoriaSearch extends Memoria
             return $dataProvider;
         }
 
+        $query->joinWith('eventoIdevento');
+
         $query->andFilterWhere([
             'idmemoria' => $this->idmemoria,
-            'evento_idevento' => $this->evento_idevento,
+            //'evento_idevento' => $this->evento_idevento,
         ]);
 
-        $query->andFilterWhere(['like', 'nombre', $this->nombre])
-            ->andFilterWhere(['like', 'descripcion', $this->descripcion])
-            ->andFilterWhere(['like', 'archivo', $this->archivo]);
+        $query->andFilterWhere(['like', 'memoria.nombre', $this->nombre])
+            ->andFilterWhere(['like', 'memoria.descripcion', $this->descripcion])
+            ->andFilterWhere(['like', 'archivo', $this->archivo])
+            ->andFilterWhere(['like', 'evento.nombre', $this->evento_idevento]);
 
         return $dataProvider;
     }

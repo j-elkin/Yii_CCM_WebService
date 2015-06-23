@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Memoria', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Memoria', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -28,8 +28,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'idmemoria',
             'nombre',
             'descripcion',
-            'archivo',
-            'evento_idevento',
+            //'archivo',
+            //'archivoMemoria',//Funcion de Memoria.php
+            
+            [   
+                'label' => 'Archivo Memoria',
+                'format' => 'raw',
+                'value' => 'archivoMemoria',
+            ],
+
+            //'evento_idevento',
+            //'eventoIdevento.nombre',
+            [
+                'attribute'=>'evento_idevento',
+                'value'=>'eventoIdevento.nombre',
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
