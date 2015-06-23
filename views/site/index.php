@@ -84,9 +84,9 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
     <div class="container marketing">
       <div class="row">
         <div class="col-lg-4">
-            <div align="center"><img class="img-circle" src="../views/images/logo.jpg" style="width: 140px; height: 140px;"></div><h4>CCM en Facebook</h4>
-            <p>Siguenos en Facebook...</p>
-            <div align="center"><p><a class="btn btn-default" href="https://www.facebook.com/ccm2015" role="button">Ver Más»</a></p></div>
+            <div align="center"><img class="img-circle" src="../views/images/logo_scm.png" style="width: 140px; height: 140px;"></div><h4>Sociedad Colombiana de Matemáticas</h4>
+            <p>El logotipo de la Sociedad Colombiana de Matemáticas fue diseñado por el maestro colombiano ANTONIO GRASS, conocido estudioso del arte pre-hispánico...</p>
+            <div align="center"><p><a class="btn btn-default" href="http://www.scm.org.co/" role="button">Ver Más»</a></p></div>
         </div>
         <div class="col-lg-4">
           <div align="center"><img class="img-circle" src="../views/images/logo.jpg" style="width: 140px; height: 140px;"></div><h4>XX Congreso Colombiano de Matemáticas.</h4>
