@@ -58,6 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
    <!--  <?php
         //echo $model->displayImage;
     ?> -->
+    <!-- <img src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo $model->docPersona;?>&amp;size=220x220&amp;format=png" alt="Prueba" title="Código QR <?php echo $model->docPersona;?>" /> -->
 
 </div>
 

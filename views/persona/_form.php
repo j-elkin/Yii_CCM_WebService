@@ -29,15 +29,12 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Seleccione género']
     ) ?>
 
-    
- 
-
     <?= $form->field($model, 'correo_electronico')->input('email') ?>
 
     <?= $form->field($model, 'telefono')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'file_qr')->fileInput() ?>
-    <!--<img src="<?php echo Yii::$app->params['uploadPath'].'codigo_qr_question.jpg' ?>"> -->
+    
+    <!--<?= $form->field($model, 'file_qr')->fileInput() ?>-->
+    <!--<img src="<?php //echo Yii::$app->params['uploadPath'].'codigo_qr_question.jpg' ?>"> -->
 
     <?= $form->field($model, 'tipo_doc_idtipo_doc')->dropDownList(
         ArrayHelper::map(TipoDoc::find()->all(),'idtipo_doc','tipo_documento'),
@@ -72,6 +69,10 @@ use dosamigos\datepicker\DatePicker;
             ]
     ]);?>
 
+    <!-- <img id="QrCode" src="/Yii_CCM_WebService/web/uploads/codigo_qr_question.jpg" style="display:none;">  -->
+    <img id="QrCode" src="" style="display:none;">
+    <br></br>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
@@ -79,3 +80,30 @@ use dosamigos\datepicker\DatePicker;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<script type="text/javascript" src="/Yii_CCM_WebService/web/assets/6beff9cc/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       
+        $('#persona-docpersona').focusout(function(event) {
+            var documento = $('#persona-docpersona').val();
+            //para el caso de registro: Se muestra el Código QR generado
+            if(documento != ""){
+                if( documento.match(/^[0-9]*$/) ){
+                    //console.log("es numero");
+                    $('#QrCode').attr('src','https://api.qrserver.com/v1/create-qr-code/?data='+documento+'&amp;size=220x220&amp;format=png');
+                    $("#QrCode").attr('title', 'Código Qr para '+documento);
+                    $('#QrCode').show('fast');
+                }
+                else{
+                    //console.log("No es numero");
+                    $('#QrCode').hide('fast');
+                }
+            }
+            else{
+                //console.log("Vacio");
+                $('#QrCode').hide('fast');
+            }
+        });
+    });
+</script>

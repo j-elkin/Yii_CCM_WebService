@@ -102,8 +102,8 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
         </div> 
 
         <div class="col-lg-4">
-          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Universidad Nacional de Colombia Sede Manizales</h4>
-          <p>Facultad de Ciencias Exactas y Naturales</p>
+          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Facultad de Ciencias Exactas y Naturales</h4>
+          <p>Universidad Nacional de Colombia Sede Manizales</p>
           <div align="center"><p><a class="btn btn-default" href="http://www.fcen.unal.edu.co/" role="button">Ver Más»</a></p></div>         
         </div> 
       </div><br><br>

@@ -20,7 +20,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <link rel="icon" href="../views/images/logo.jpg">
+    <link rel="icon" href="/Yii_CCM_WebService/views/images/logo.jpg">
     <?php $this->head() ?>
 </head>
 <body>

@@ -92,7 +92,7 @@ class Memoria extends \yii\db\ActiveRecord
         $file_memo = null;
 
         //$file_memo = Html::a($model->archivo, Yii::$app->urlManager->baseUrl . '/memorias/' . $model->archivo, [
-        $file_memo = Html::a($model->archivo, 'download.php?filename='.$model->archivo, [
+        $file_memo = Html::a($model->archivo, Yii::$app->urlManager->baseUrl .'/download.php?filename='.$model->archivo, [
                 'alt'=>Yii::t('app', 'Archivo memoria '),
                 'title'=>Yii::t('app', 'Descargar memoria'),
             ]);

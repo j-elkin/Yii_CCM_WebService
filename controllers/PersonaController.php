@@ -68,8 +68,8 @@ class PersonaController extends Controller
 
             //Obtener la instancia del archivo QR subido
             $QrName = $model->docPersona;
-            $model->file_qr = UploadedFile::getInstance($model, 'file_qr');
-            //$model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
+            //El siguiente bloque se comento porque ya no se carga el codigo QR desde el form sino que se crea automatico a través de la API
+            /*$model->file_qr = UploadedFile::getInstance($model, 'file_qr');
 
             if(!empty($model->file_qr)){ //Se ha cargado código qr para la persona
 
@@ -78,11 +78,23 @@ class PersonaController extends Controller
                 $model->save();
                 //guardando el archivo en el servidor
                 $model->file_qr->saveAs( 'uploads/'.$QrName.'.'.$model->file_qr->extension );
+                
             }
             else{
                 $model->codigo_qr = null;
                 $model->save();
-            }
+                
+            }*/
+
+            $model->codigo_qr = 'uploads/'.$QrName.".png";
+            $model->save();
+            //Se genera el Código QR de acuerdo al documento de la persona a través de la API
+            // y se obtiene el archivo (imagen)
+            $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$QrName."&amp;size=220x220&amp;format=png");
+            //Almacenar en el servidor.
+            $fp = fopen("uploads/".$QrName.".png", "w");
+            fwrite($fp, $contene);
+            fclose($fp);
 
             return $this->redirect(['view', 'id' => $model->docPersona]);
         } else {
@@ -103,11 +115,54 @@ class PersonaController extends Controller
     {
         $model = $this->findModel($id);
 
-        $nuevo_qr = UploadedFile::getInstance($model, 'file_qr');
+        //Se comento porque ya no se carga el codigo qr desde input file. Este se genera automáticamente con la API
+        //$nuevo_qr = UploadedFile::getInstance($model, 'file_qr');
 
         if ($model->load(Yii::$app->request->post()) ) {
+            //Se guarda los datos del modelo en la BD
+            $model->save();
+            $documento = $model->docPersona;
 
-            if (!empty($nuevo_qr) ) {
+            //Lo que se va a hacer ahora es consultar en la BD con el documento de la persona
+            //los datos asociados de la misma, esto con fin de verificar si se cambio el numero de documento
+            //para actualizar el Código QR si fuese el caso
+
+            //Obteniendo el path del archivo QR almacenado al correspondiente documento
+            //No funciono:
+            /*$archivoQR = Persona::find()
+                            ->select('codigo_qr')
+                            ->where('docPersona = :documento', [':documento' => $documento])
+                            ->one();*/
+            $modeloConsulta = Persona::find()
+                            ->where('docPersona = :documento', [':documento' => $documento])
+                            ->one();
+
+            $codigo_qr_consulta = (string) $modeloConsulta->codigo_qr;//casting ya que recibe un objeto
+
+            // uploads/12345.png
+            $separa1 = explode("/", $codigo_qr_consulta );
+            $separa2 = explode(".", $separa1[1]);
+            if($separa2[0] != $documento){
+                //borra el antiguo QR
+                $this->findModel( $documento )->deleteImage($codigo_qr_consulta);//Importante el $documento. Ya no es con $id
+                
+                //Estableciento el nuevo QR
+                $model->codigo_qr='uploads/'.$documento.".png";//Con el nuevo documento
+                $model->save();
+
+                //Se genera el Código QR de acuerdo al documento de la persona a través de la API
+                // y se obtiene el archivo (imagen)
+                $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$documento."&amp;size=220x220&amp;format=png");
+                //Almacenar en el servidor.
+                $fp = fopen("uploads/".$documento.".png", "w");
+                fwrite($fp, $contene);
+                fclose($fp);
+            }
+
+            return $this->redirect(['view', 'id' => $model->docPersona]);
+            //El siquiente bloque se comento porque ya no se carga el codigo qr desde input file.
+            //Este se genera automáticamente con la API en caso de actualizar el documento
+            /*if (!empty($nuevo_qr) ) {
 
                 if($model->codigo_qr!=null){
                     //borra el antiguo QR
@@ -131,7 +186,7 @@ class PersonaController extends Controller
             else{
                 $model->save();
                 return $this->redirect(['view', 'id' => $model->docPersona]);
-            }
+            }*/
 
             
         }
@@ -150,7 +205,7 @@ class PersonaController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->deleteImage();
+        $this->findModel($id)->deleteImage( $this->findModel($id)->codigo_qr );
         $this->findModel($id)->delete();
         
         return $this->redirect(['index']);

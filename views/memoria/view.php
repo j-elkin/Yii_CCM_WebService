@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
            [   
                 'attribute' => 'Archivo Memoria',
                 'format' => 'raw',
-                'value' => Html::a($model->archivo, 'download.php?filename='.$model->archivo, [
+                'value' => Html::a($model->archivo, Yii::$app->urlManager->baseUrl .'/download.php?filename='.$model->archivo, [
                             'alt'=>Yii::t('app', 'Archivo memoria '),
                             'title'=>Yii::t('app', 'Descargar memoria'),
                         ]),
