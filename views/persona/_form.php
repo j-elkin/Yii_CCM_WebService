@@ -9,6 +9,7 @@ use app\models\Institucion;
 use app\models\TipoPersona;
 use dosamigos\datepicker\DatePicker;
 
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Persona */
 /* @var $form yii\widgets\ActiveForm */
@@ -76,6 +77,8 @@ use dosamigos\datepicker\DatePicker;
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
+
+
 
     <?php ActiveForm::end(); ?>
 

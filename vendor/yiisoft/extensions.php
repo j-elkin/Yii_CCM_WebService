@@ -84,4 +84,22 @@ return array (
       '@dosamigos/datetimepicker' => $vendorDir . '/2amigos/yii2-date-time-picker-widget/src',
     ),
   ),
+  'kartik-v/yii2-krajee-base' => 
+  array (
+    'name' => 'kartik-v/yii2-krajee-base',
+    'version' => '1.7.7.0',
+    'alias' => 
+    array (
+      '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
+    ),
+  ),
+  'kartik-v/yii2-social' => 
+  array (
+    'name' => 'kartik-v/yii2-social',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/social' => $vendorDir . '/kartik-v/yii2-social',
+    ),
+  ),
 );
