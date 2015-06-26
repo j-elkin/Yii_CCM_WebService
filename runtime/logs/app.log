@@ -29898,3 +29898,1674 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1435079775.013
     'REQUEST_TIME' => 1435079775
 ]
+2015-06-23 21:32:41 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "modelClass" property must be set.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\rest\ActiveController.php:63
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Object.php(107): yii\rest\ActiveController->init()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#2 [internal function]: yii\base\Controller->__construct('rest/tipo-doc', Object(yii\web\Application), Array)
+#3 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#4 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\\controllers...', Array, Array)
+#5 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('app\\controllers...', Array)
+#6 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('app\\controllers...', Array)
+#7 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Module->createControllerByID('rest/tipo-doc')
+#8 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('rest/tipo-doc')
+#9 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rest/tipo-doc', Array)
+#10 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-06-23 21:32:41 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '50955'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435087961.304
+    'REQUEST_TIME' => 1435087961
+]
+2015-06-23 21:33:35 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '$modelClass' (T_VARIABLE), expecting function (T_FUNCTION)' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\controllers\rest\TipoDocController.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-23 21:33:35 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '50957'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435088015.861
+    'REQUEST_TIME' => 1435088015
+]
+2015-06-23 21:37:09 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "modelClass" property must be set.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\rest\ActiveController.php:63
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Object.php(107): yii\rest\ActiveController->init()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#2 [internal function]: yii\base\Controller->__construct('rest/tipo-doc', Object(yii\web\Application), Array)
+#3 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#4 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\\controllers...', Array, Array)
+#5 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('app\\controllers...', Array)
+#6 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('app\\controllers...', Array)
+#7 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Module->createControllerByID('rest/tipo-doc')
+#8 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('rest/tipo-doc')
+#9 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rest/tipo-doc', Array)
+#10 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-06-23 21:37:08 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '50988'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435088228.932
+    'REQUEST_TIME' => 1435088228
+]
+2015-06-23 21:37:41 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '$modelClass' (T_VARIABLE), expecting function (T_FUNCTION)' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\controllers\rest\TipoDocController.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-23 21:37:41 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '50992'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435088261.023
+    'REQUEST_TIME' => 1435088261
+]
+2015-06-23 21:39:29 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '$modelClass' (T_VARIABLE), expecting function (T_FUNCTION)' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\controllers\rest\TipoDocController.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-23 21:39:29 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '50996'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435088369.533
+    'REQUEST_TIME' => 1435088369
+]
+2015-06-23 21:39:42 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '$modelClass' (T_VARIABLE), expecting function (T_FUNCTION)' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\controllers\TipoDocController.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-23 21:39:42 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '50998'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435088382.635
+    'REQUEST_TIME' => 1435088382
+]
+2015-06-23 21:45:57 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '$modelClass' (T_VARIABLE), expecting function (T_FUNCTION)' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\controllers\TipoDocController.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-23 21:45:56 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/Yii_CCM_WebService/web/index.php/gii/controller'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51056'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/tipo-doc/index'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/tipo-doc/index'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\tipo-doc\\index'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/tipo-doc/index'
+    'REQUEST_TIME_FLOAT' => 1435088756.963
+    'REQUEST_TIME' => 1435088756
+]
+2015-06-23 21:54:55 [::1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Response content must not be an array.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Response.php:951
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Response.php(311): yii\web\Response->prepare()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(381): yii\web\Response->send()
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2015-06-23 21:54:55 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51097'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/tipo-doc/index'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/tipo-doc/index'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\tipo-doc\\index'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/tipo-doc/index'
+    'REQUEST_TIME_FLOAT' => 1435089295.812
+    'REQUEST_TIME' => 1435089295
+]
+2015-06-23 21:58:25 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: tipo-doc/2' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('2', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('tipo-doc/2', Array)
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-23 21:58:25 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51137'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/tipo-doc/2'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/tipo-doc/2'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\tipo-doc\\2'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/tipo-doc/2'
+    'REQUEST_TIME_FLOAT' => 1435089505.325
+    'REQUEST_TIME' => 1435089505
+]
+2015-06-23 21:59:01 [::1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Response content must not be an array.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Response.php:951
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Response.php(311): yii\web\Response->prepare()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(381): yii\web\Response->send()
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2015-06-23 21:59:01 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51146'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435089541.076
+    'REQUEST_TIME' => 1435089541
+]
+2015-06-23 22:01:02 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'return' (T_RETURN)' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\controllers\rest\TipoDocController.php:23
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-23 22:01:02 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51216'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435089662.642
+    'REQUEST_TIME' => 1435089662
+]
+2015-06-23 22:01:12 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\rest\ArrayHelper' not found' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\controllers\rest\TipoDocController.php:23
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-23 22:01:12 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51218'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/tipo-doc'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\tipo-doc'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/tipo-doc'
+    'REQUEST_TIME_FLOAT' => 1435089672.835
+    'REQUEST_TIME' => 1435089672
+]
+2015-06-23 22:06:50 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "modelClass" property must be set.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\rest\ActiveController.php:63
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Object.php(107): yii\rest\ActiveController->init()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Controller.php(81): yii\base\Object->__construct(Array)
+#2 [internal function]: yii\base\Controller->__construct('rest/pais-proce...', Object(yii\web\Application), Array)
+#3 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\di\Container.php(366): ReflectionClass->newInstanceArgs(Array)
+#4 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\di\Container.php(151): yii\di\Container->build('app\\controllers...', Array, Array)
+#5 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('app\\controllers...', Array)
+#6 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(568): yii\BaseYii::createObject('app\\controllers...', Array)
+#7 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID('rest/pais-proce...')
+#8 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController('rest/pais-proce...')
+#9 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rest/pais-proce...', Array)
+#10 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-06-23 22:06:50 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51250'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/pais-procedencia'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/pais-procedencia'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\pais-procedencia'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/pais-procedencia'
+    'REQUEST_TIME_FLOAT' => 1435090010.843
+    'REQUEST_TIME' => 1435090010
+]
+2015-06-23 22:07:54 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "rest".' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rest', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-23 22:07:54 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51254'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest'
+    'REQUEST_TIME_FLOAT' => 1435090074.719
+    'REQUEST_TIME' => 1435090074
+]
+2015-06-23 22:09:56 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\rest\ArrayHelper' not found' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\controllers\rest\InstitucionController.php:22
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-23 22:09:56 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51265'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/institucion'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/institucion'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\institucion'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/institucion'
+    'REQUEST_TIME_FLOAT' => 1435090196.869
+    'REQUEST_TIME' => 1435090196
+]
+2015-06-23 23:06:21 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: rest/persona/35' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('35', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rest/persona/35', Array)
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-23 23:06:21 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51910'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/persona/35'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/persona/35'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\persona\\35'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/persona/35'
+    'REQUEST_TIME_FLOAT' => 1435093581.186
+    'REQUEST_TIME' => 1435093581
+]
+2015-06-23 23:06:21 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "rest/views/images/logo.jpg".' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rest/views/imag...', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-23 23:06:21 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51910'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/views/images/logo.jpg'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/views/images/logo.jpg'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\views\\images\\logo.jpg'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/views/images/logo.jpg'
+    'REQUEST_TIME_FLOAT' => 1435093581.35
+    'REQUEST_TIME' => 1435093581
+]
+2015-06-23 23:06:21 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "rest/views/images/logo.jpg".' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rest/views/imag...', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-23 23:06:21 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51911'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/views/images/logo.jpg'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/views/images/logo.jpg'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\views\\images\\logo.jpg'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/views/images/logo.jpg'
+    'REQUEST_TIME_FLOAT' => 1435093581.551
+    'REQUEST_TIME' => 1435093581
+]
+2015-06-23 23:07:16 [::1][-][-][error][yii\web\HttpException:405] exception 'yii\web\MethodNotAllowedHttpException' with message 'Method Not Allowed. This url can only handle the following request methods: POST.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\filters\VerbFilter.php:105
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\rest\CreateAction))
+#4 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\rest\CreateAction))
+#5 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('create', Array)
+#6 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('rest/persona/cr...', Array)
+#7 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2015-06-23 23:07:16 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '51924'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/persona/create'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/persona/create'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\persona\\create'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/persona/create'
+    'REQUEST_TIME_FLOAT' => 1435093636.806
+    'REQUEST_TIME' => 1435093636
+]
+2015-06-24 00:46:43 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Request.php:187
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2015-06-24 00:46:43 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '53245'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/rest/persona'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/rest/persona'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\rest\\persona'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/rest/persona'
+    'REQUEST_TIME_FLOAT' => 1435099603.926
+    'REQUEST_TIME' => 1435099603
+]
+2015-06-24 00:47:31 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Request.php:187
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2015-06-24 00:47:30 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '53251'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1435099650.955
+    'REQUEST_TIME' => 1435099650
+]
+2015-06-24 00:47:35 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Request.php:187
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2015-06-24 00:47:35 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/Yii_CCM_WebService/web/index.php'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '53251'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1435099655.572
+    'REQUEST_TIME' => 1435099655
+]
+2015-06-24 00:47:41 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Request.php:187
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2015-06-24 00:47:41 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/Yii_CCM_WebService/web/index.php'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '53253'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/persona/index'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/persona/index'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\persona\\index'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/persona/index'
+    'REQUEST_TIME_FLOAT' => 1435099661.728
+    'REQUEST_TIME' => 1435099661
+]
+2015-06-24 00:47:43 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Request.php:187
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+2015-06-24 00:47:43 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"KX74wEKNe3KuhR3HIviqrQee5fL-E5Up\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/Yii_CCM_WebService/web/index.php/persona/index'
+    'HTTP_COOKIE' => '_csrf=b7acdbee7c11aee541e2423e346fad59ed58c63bd70df91230dbfebbf6f23c0aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22KX74wEKNe3KuhR3HIviqrQee5fL-E5Up%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '53253'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/persona-evento/index'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/persona-evento/index'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\persona-evento\\index'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/persona-evento/index'
+    'REQUEST_TIME_FLOAT' => 1435099663.227
+    'REQUEST_TIME' => 1435099663
+]
+2015-06-25 23:24:04 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: persona/1053832644' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('1053832644', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('persona/1053832...', Array)
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-25 23:24:03 [::1][-][-][info][application] $_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;D:\\Archivos de programa\\Heroku\\bin;C:\\Program Files (x86)\\git\\cmd;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '58003'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/persona/1053832644'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/persona/1053832644'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\persona\\1053832644'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/persona/1053832644'
+    'REQUEST_TIME_FLOAT' => 1435267443.523
+    'REQUEST_TIME' => 1435267443
+]
+2015-06-25 23:24:05 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "views/images/logo.jpg".' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('views/images/lo...', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-25 23:24:05 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;D:\\Archivos de programa\\Heroku\\bin;C:\\Program Files (x86)\\git\\cmd;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '58008'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/views/images/logo.jpg'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/views/images/logo.jpg'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\views\\images\\logo.jpg'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/views/images/logo.jpg'
+    'REQUEST_TIME_FLOAT' => 1435267444.985
+    'REQUEST_TIME' => 1435267444
+]
+2015-06-25 23:24:05 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "views/images/logo.jpg".' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('views/images/lo...', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-25 23:24:05 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;D:\\Archivos de programa\\Heroku\\bin;C:\\Program Files (x86)\\git\\cmd;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '58005'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/views/images/logo.jpg'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/views/images/logo.jpg'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\views\\images\\logo.jpg'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/views/images/logo.jpg'
+    'REQUEST_TIME_FLOAT' => 1435267445.181
+    'REQUEST_TIME' => 1435267445
+]
+2015-06-25 23:24:05 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "views/images/logo.jpg".' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('views/images/lo...', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-25 23:24:05 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;D:\\Archivos de programa\\Heroku\\bin;C:\\Program Files (x86)\\git\\cmd;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '58005'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/views/images/logo.jpg'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/views/images/logo.jpg'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\views\\images\\logo.jpg'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/views/images/logo.jpg'
+    'REQUEST_TIME_FLOAT' => 1435267445.506
+    'REQUEST_TIME' => 1435267445
+]
+2015-06-26 17:19:04 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "persona/uploads/codigo_qr_question.jpg".' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('persona/uploads...', Array)
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-06-26 17:19:04 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/Yii_CCM_WebService/web/index.php/persona/view?id=1053832644'
+    'HTTP_COOKIE' => '_csrf=8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;D:\\Archivos de programa\\Heroku\\bin;C:\\Program Files (x86)\\git\\cmd;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '59610'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/persona/uploads/codigo_qr_question.jpg'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/persona/uploads/codigo_qr_question.jpg'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\persona\\uploads\\codigo_qr_question.jpg'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/persona/uploads/codigo_qr_question.jpg'
+    'REQUEST_TIME_FLOAT' => 1435331944.577
+    'REQUEST_TIME' => 1435331944
+]
