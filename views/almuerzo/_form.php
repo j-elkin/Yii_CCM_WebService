@@ -40,7 +40,7 @@ use kartik\widgets\Alert;
         'pickButtonIcon' => 'glyphicon glyphicon-time',
         'inline' => false,
         'clientOptions' => [
-            'startView' => 0,
+            'startView' => 1,
             'minView' => 0,
             'maxView' => 1,
             'autoclose' => true,
