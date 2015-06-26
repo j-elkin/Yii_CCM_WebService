@@ -54,10 +54,13 @@ $config = [
                 'POST rest/persona/create' => 'rest/persona/create',           
                 //['class' => 'yii\rest\UrlRule', 'controller' => 'persona'],
 
-                //REGLAS DE URL PARA LA TABLA tipo_doc  
+                //REGLAS DE URL PARA LA TABLAS DE COMPLETITUD tipo_doc, pais_procedencia, institucion
                 'GET rest/tipo-doc' => 'rest/tipo-doc/index',
                 'GET rest/pais-procedencia' => 'rest/pais-procedencia/index',
                 'GET rest/institucion' => 'rest/institucion/index',
+
+                //REGLAS DE URL PARA LA TABLA Evento
+                'GET rest/evento' => 'rest/evento/index',
             ],
         ],
 

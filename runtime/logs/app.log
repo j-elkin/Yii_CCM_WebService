@@ -31569,3 +31569,108 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1435331944.577
     'REQUEST_TIME' => 1435331944
 ]
+2015-06-26 18:56:17 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'kartik\social\FacebookPlugin' not found' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\views\layouts\main.php:109
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-26 18:56:16 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/Yii_CCM_WebService/web/index.php/evento/view?id=6'
+    'HTTP_COOKIE' => '_csrf=8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;D:\\Archivos de programa\\Heroku\\bin;C:\\Program Files (x86)\\git\\cmd;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '60392'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1435337776.86
+    'REQUEST_TIME' => 1435337776
+]
+2015-06-26 21:32:29 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'kartik\social\FacebookPlugin' not found' in D:\Archivos de programa\xampp\htdocs\Yii_CCM_WebService\views\layouts\main.php:109
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-06-26 21:32:29 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Archivos de programa/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Archivos de programa/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_csrf=8b386549eb02bb5dd127a6a98be6fca2fdd6b4082d358dfca77c60e3e83b1583a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kAtLPKPZbbguZN2dKTw-_DNL0mMrglsA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\Archivos de programa\\Android\\android-sdk-windows\\platform-tools;D:\\DOWNLOADS\\netcat;D:\\DOWNLOADS\\nmap-6.47-win32\\nmap-6.47;D:\\Archivos de programa\\nodejs\\;D:\\Archivos de programa\\apktool;C:\\Program Files (x86)\\Java\\jdk1.8.0_25\\bin;D:\\Archivos de programa\\openssl-0.9.8k_X64\\bin;D:\\Archivos de programa\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\DOWNLOADS\\curl-7.42.0-win64\\curl-7.42.0-win64\\bin;D:\\Archivos de programa\\Heroku\\bin;C:\\Program Files (x86)\\git\\cmd;C:\\Users\\usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Archivos de programa/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Archivos de programa/xampp/htdocs/Yii_CCM_WebService/web/index.php'
+    'REMOTE_PORT' => '60714'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/Yii_CCM_WebService/web/index.php/evento'
+    'SCRIPT_NAME' => '/Yii_CCM_WebService/web/index.php'
+    'PATH_INFO' => '/evento'
+    'PATH_TRANSLATED' => 'D:\\Archivos de programa\\xampp\\htdocs\\evento'
+    'PHP_SELF' => '/Yii_CCM_WebService/web/index.php/evento'
+    'REQUEST_TIME_FLOAT' => 1435347149.234
+    'REQUEST_TIME' => 1435347149
+]
