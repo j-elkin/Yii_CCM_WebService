@@ -8,7 +8,7 @@ use Yii;
 /**
  * This is the model class for table "persona".
  *
- * @property integer $docPersona
+ * @property string $docPersona
  * @property string $nombre
  * @property string $apellidos
  * @property string $genero
@@ -19,7 +19,6 @@ use Yii;
  * @property integer $tipo_doc_idtipo_doc
  * @property integer $pais_procedencia_idpais_procedencia
  * @property integer $institucion_idinstitucion
- * @property integer $tipo_persona_idtipo_persona
  *
  * @property Almuerzo[] $almuerzos
  * @property PerEvt[] $perEvts
@@ -48,11 +47,12 @@ class Persona extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['docPersona', 'nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'required'],
-            [['docPersona', 'telefono', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'tipo_persona_idtipo_persona'], 'integer'],
+            [['docPersona', 'nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion'], 'required'],
+            [[ 'telefono', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion'], 'integer'],
             [['correo_electronico'], 'email'],
             //[['file_qr'], 'file', 'extensions'=>'jpg, gif, png'],
             [['codigo_qr'], 'string', 'max' => 100],
+            [['docPersona'], 'string', 'max' => 50],
             [['nombre', 'apellidos', 'genero', 'fecha_nacimiento'], 'string', 'max' => 45]
         ];
     }
@@ -74,7 +74,6 @@ class Persona extends \yii\db\ActiveRecord
             'tipo_doc_idtipo_doc' => 'Tipo de Documento',
             'pais_procedencia_idpais_procedencia' => 'País de Procedencia',
             'institucion_idinstitucion' => 'Institución',
-            'tipo_persona_idtipo_persona' => 'Tipo Persona',
             'file_qr' => 'Código QR'
         ];
     }
@@ -127,13 +126,7 @@ class Persona extends \yii\db\ActiveRecord
         return $this->hasOne(TipoDoc::className(), ['idtipo_doc' => 'tipo_doc_idtipo_doc']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTipoPersonaIdtipoPersona()
-    {
-        return $this->hasOne(TipoPersona::className(), ['idtipo_persona' => 'tipo_persona_idtipo_persona']);
-    }
+    
 
 
     const IMAGE_PLACEHOLDER = '/Yii_CCM_WebService/web/uploads/codigo_qr_question.jpg';

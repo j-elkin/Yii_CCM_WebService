@@ -25,6 +25,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fecha') ?>
 
+    <?= $form->field($model, 'limite_cupos') ?>
+
     <?php // echo $form->field($model, 'evento_idevento') ?>
 
     <div class="form-group">

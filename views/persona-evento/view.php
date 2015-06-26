@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'personaIdpersona.documentoNombre',
             'personaIdpersona.nombre',
             'personaIdpersona.apellidos',
+            'tipoPersonaIdtipoPersona.tipo_persona',
             
         ],
         

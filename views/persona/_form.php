@@ -52,10 +52,7 @@ use dosamigos\datepicker\DatePicker;
         ['prompt'=>'Seleccione institución']
     ) ?>
 
-    <?= $form->field($model, 'tipo_persona_idtipo_persona')->dropDownList(
-        ArrayHelper::map(TipoPersona::find()->all(),'idtipo_persona','tipo_persona'),
-        ['prompt'=>'Seleccione persona']
-    ) ?>
+    
 
     <?= $form->field($model, 'fecha_nacimiento')->widget(
         DatePicker::className(), [

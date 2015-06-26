@@ -26,10 +26,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'idubicacion',
+            'lugar',
+            'limite_cupos',
+            'fecha',
             'hora_inicio',
             'hora_fin',
-            'lugar',
-            'fecha',
+                       
             //'evento_idevento',
             [
                 'attribute'=>'evento_idevento',

@@ -42,10 +42,10 @@ class Almuerzo extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idAlmuerzo' => 'Id Almuerzo',
+            'idAlmuerzo' => 'N° Almuerzo',
             'fecha' => 'Fecha',
             'hora' => 'Hora',
-            'persona_docPersona' => 'Persona Doc Persona',
+            'persona_docPersona' => 'Documento Persona',
         ];
     }
 

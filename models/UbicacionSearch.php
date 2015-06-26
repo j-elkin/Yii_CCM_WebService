@@ -19,7 +19,7 @@ class UbicacionSearch extends Ubicacion
     {
         return [
             [['idubicacion'], 'integer'],
-            [['hora_inicio', 'hora_fin', 'lugar', 'fecha', 'evento_idevento'], 'safe'],
+            [['hora_inicio', 'hora_fin', 'lugar', 'fecha', 'evento_idevento', 'limite_cupos'], 'safe'],
         ];
     }
 
@@ -62,6 +62,7 @@ class UbicacionSearch extends Ubicacion
             'hora_inicio' => $this->hora_inicio,
             'hora_fin' => $this->hora_fin,
             'fecha' => $this->fecha,
+            'limite_cupos' => $this->limite_cupos,
             //'evento_idevento' => $this->evento_idevento,
         ]);
 

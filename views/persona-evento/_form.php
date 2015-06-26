@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\models\Evento;
 use app\models\Persona;
+use app\models\TipoPersona;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\PersonaEvento */
@@ -23,6 +24,11 @@ use app\models\Persona;
     <?= $form->field($model, 'persona_idpersona')->dropDownList(
         ArrayHelper::map(Persona::find()->all(),'docPersona','documentoNombre'),
         ['prompt'=>'Seleccione Persona']
+    ) ?>
+
+    <?= $form->field($model, 'tipo_persona_idtipo_persona')->dropDownList(
+        ArrayHelper::map(TipoPersona::find()->all(),'idtipo_persona','tipo_persona'),
+        ['prompt'=>'Seleccione persona']
     ) ?>
 
     <div class="form-group">

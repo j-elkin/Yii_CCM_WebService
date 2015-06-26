@@ -53,7 +53,7 @@ AppAsset::register($this);
                     
                     ['label' => 'Personas',  'items' => [
                         ['label' => 'Persona', 'url' => ['/persona/index']],
-                        ['label' => 'Almuerzo', 'url' => '#'],                    
+                        ['label' => 'Almuerzo', 'url' => ['/almuerzo/index']],                    
                     ]],
 
                     ['label' => 'Eventos', 'items'=> [

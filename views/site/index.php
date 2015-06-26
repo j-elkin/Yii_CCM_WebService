@@ -116,27 +116,12 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
 </div>
 
 <?php 
-    echo FacebookPlugin::widget(['type'=>FacebookPlugin::POST, 'settings' => ['href'=>'http://facebook.com/ccm2015/posts/867712916633152:0'], 'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
+    /*echo FacebookPlugin::widget(['type'=>FacebookPlugin::POST, 'settings' => ['href'=>'http://facebook.com/ccm2015/posts/867712916633152:0'], 'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
     echo "<br></br>";
     echo FacebookPlugin::widget(['type'=>FacebookPlugin::POST, 'settings' => ['href'=>'http://facebook.com/ccm2015/posts/866173546787089:0'], 'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
    //echo FacebookPlugin::widget(['type'=>FacebookPlugin::FOLLOW, 'settings' => ['href'=>'http://facebook.com/ccm2015'], 'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
-    echo "<br></br><br></br>";
+    echo "<br></br><br></br>";*/
     //echo TwitterPlugin::widget(['type'=>TwitterPlugin::FOLLOW, 'settings' => ['size'=>'large'], 'language' => 'es_CO', 'screenName' => 'https://twitter.com/@conmate2015']);
     //echo TwitterPlugin::widget(['type'=>TwitterPlugin::TWEET, 'content' => 'Here’s how to embed content from Twitter directly on to your website/blog. It’s SOOO easy! @seosmarty @PostPlanner http://bit.ly/1Dl0pPV', 'settings' => ['href'=>'http://twitter.com/@conmate2015'], 'language' => 'es_CO', 'screenName' => 'https://twitter.com/@conmate2015']);
     // echo FacebookPlugin::widget(['type'=>FacebookPlugin::ACTIVITY, 'settings' => ['href'=>'http://facebook.com/ccm2015'],'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
 ?>                                                                        
-
-<!--  <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
-    var disqus_shortname = 'example'; // Required - Replace example with your forum shortname
-    var disqus_identifier = 'a unique identifier for each page where Disqus is present';
-    var disqus_title = 'a unique title for each page where Disqus is present';
-    var disqus_url = 'www.facebook.com/ccm2015';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_url + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>  -->

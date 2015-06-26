@@ -32,8 +32,8 @@ class Ubicacion extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['hora_inicio', 'hora_fin', 'lugar', 'evento_idevento'], 'required'],
-            [['idubicacion', 'evento_idevento'], 'integer'],
+            [['hora_inicio', 'hora_fin', 'lugar', 'evento_idevento', 'limite_cupos'], 'required'],
+            [['idubicacion', 'evento_idevento', 'limite_cupos'], 'integer'],
             [['hora_inicio', 'hora_fin', 'fecha'], 'safe'],
             [['lugar'], 'string', 'max' => 45]
         ];
@@ -51,6 +51,7 @@ class Ubicacion extends \yii\db\ActiveRecord
             'lugar' => 'Lugar',
             'fecha' => 'Fecha',
             'evento_idevento' => 'Evento',
+            'limite_cupos' => 'Limite de cupos',
         ];
     }
 

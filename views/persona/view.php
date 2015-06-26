@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'tipoDocIdtipoDoc.tipo_documento',
             'paisProcedenciaIdpaisProcedencia.nombre',
             'institucionIdinstitucion.nombre',
-            'tipoPersonaIdtipoPersona.tipo_persona',
+            
             /*[   
                 'label' => 'Código QR',
                 'format' => 'raw',

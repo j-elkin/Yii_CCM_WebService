@@ -32,6 +32,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             'persona_idpersona',
 
+            [
+                'attribute'=>'tipo_persona_idtipo_persona',
+                'value'=>'tipoPersonaIdtipoPersona.tipo_persona',
+            ],
+
             
 
             ['class' => 'yii\grid\ActionColumn'],
