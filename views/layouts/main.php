@@ -4,6 +4,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use kartik\social\FacebookPlugin;
+use kartik\social\TwitterPlugin;
 
 //use yii\widgets\Menu;//Importante para los menus
 
@@ -20,7 +22,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <link rel="icon" href="../views/images/logo.jpg">
+    <link rel="icon" href="/Yii_CCM_WebService/views/images/logo.jpg">
     <?php $this->head() ?>
 </head>
 <body>
@@ -51,7 +53,7 @@ AppAsset::register($this);
                     
                     ['label' => 'Personas',  'items' => [
                         ['label' => 'Persona', 'url' => ['/persona/index']],
-                        ['label' => 'Almuerzo', 'url' => '#'],                    
+                        ['label' => 'Almuerzo', 'url' => ['/almuerzo/index']],                    
                     ]],
 
                     ['label' => 'Eventos', 'items'=> [
@@ -101,8 +103,14 @@ AppAsset::register($this);
     <footer class="footer">
         <div class="container">
             <!-- <p class="pull-left">&copy; Congreso Colombiano de Matemáticas <?= date('Y') ?></p> -->
-            <p class="pull-left">Congreso Colombiano de Matemáticas <?= date('Y') ?></p>
+            <!--<p class="pull-left">Congreso Colombiano de Matemáticas <?= date('Y') ?></p>-->
             <!-- <p class="pull-right"><?= Yii::powered() ?></p> -->
+            <?php 
+               echo FacebookPlugin::widget(['type'=>FacebookPlugin::FOLLOW, 'settings' => ['href'=>'http://facebook.com/ccm2015'], 'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
+              
+              echo TwitterPlugin::widget(['type'=>TwitterPlugin::FOLLOW, 'settings' => ['size'=>'large'], 'language' => 'es_CO', 'screenName' => 'https://twitter.com/@conmate2015']);
+              //echo TwitterPlugin::widget(['type'=>TwitterPlugin::TWEET, 'content' => '@conmate2015', 'settings' => ['href'=>'http://twitter.com/@conmate2015'], 'screenName' => 'https://twitter.com/@conmate2015']);
+            ?>
         </div>
     </footer>
 

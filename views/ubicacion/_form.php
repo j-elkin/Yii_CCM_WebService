@@ -18,6 +18,10 @@ use dosamigos\datetimepicker\DateTimePicker;
 
     <?= $form->field($model, 'idubicacion')->textInput(['readonly' => true]) ?>
 
+    <?= $form->field($model, 'limite_cupos')->textInput() ?>
+
+    <?= $form->field($model, 'lugar')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'hora_inicio')->widget(DateTimePicker::className(), [
         'language' => 'es',
         'size' => 'ms',
@@ -52,7 +56,7 @@ use dosamigos\datetimepicker\DateTimePicker;
         ]
     ]);?>
 
-    <?= $form->field($model, 'lugar')->textInput(['maxlength' => true]) ?>
+    
 
     <?= $form->field($model, 'fecha')->widget(
         DatePicker::className(), [

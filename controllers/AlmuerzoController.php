@@ -8,6 +8,8 @@ use app\models\AlmuerzoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use kartik\widgets\Alert;
+use kartik\widgets\AlertBlock;
 
 /**
  * AlmuerzoController implements the CRUD actions for Almuerzo model.
@@ -62,8 +64,31 @@ class AlmuerzoController extends Controller
     {
         $model = new Almuerzo();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idAlmuerzo]);
+        if ($model->load(Yii::$app->request->post()) ) {
+            //&& $model->save()
+            //return "alert('hola')";
+            $documento = $model->persona_docPersona;
+            $numAlmuerzos = Almuerzo::find()
+                            ->where('persona_docPersona = :documento', [':documento' => $documento])
+                            ->orderBy('persona_docPersona')
+                            ->count();
+
+            if ($numAlmuerzos == 4){
+                return Alert::widget([
+                    'type' => Alert::TYPE_WARNING,
+                    'title' => 'Almuerzos consumidos!',
+                    'icon' => 'glyphicon glyphicon-exclamation-sign',
+                    'body' => 'La persona con documento N° '.$documento." ya consumio todos los almuerzos.",
+                    'showSeparator' => true,
+                    'delay' => 6000
+                ]);
+            }
+            else{
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->idAlmuerzo]);
+            }
+            
+            //return $this->redirect(['view', 'id' => $model->idAlmuerzo]);
         } else {
             return $this->render('create', [
                 'model' => $model,

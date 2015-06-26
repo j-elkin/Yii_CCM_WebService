@@ -19,7 +19,7 @@ class PersonaEventoSearch extends PersonaEvento
     {
         return [
             [['persona_idpersona'], 'integer'],
-            [['evento_idevento'], 'safe'],
+            [['evento_idevento', 'tipo_persona_idtipo_persona'], 'safe'],
         ];
     }
 
@@ -56,13 +56,15 @@ class PersonaEventoSearch extends PersonaEvento
         }
 
         $query->joinWith('eventoIdevento');
+        $query->joinWith('tipoPersonaIdtipoPersona');
 
         $query->andFilterWhere([
             //'evento_idevento' => $this->evento_idevento,
             'persona_idpersona' => $this->persona_idpersona,
         ]);
 
-        $query->andFilterWhere(['like', 'evento.nombre', $this->evento_idevento]);
+        $query->andFilterWhere(['like', 'evento.nombre', $this->evento_idevento])
+            ->andFilterWhere(['like', 'tipo_persona.tipo_persona', $this->tipo_persona_idtipo_persona]);
 
         return $dataProvider;
     }

@@ -101,7 +101,7 @@ $file_path="";
 // }else{
 // 	$file_path='../files/'.$_REQUEST['filename'];	
 // }
-$file_path='memorias/'.$_REQUEST['filename'];
+$file_path=  'memorias/'.$_REQUEST['filename'];
 
 
 

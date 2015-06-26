@@ -51,10 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'institucion_idinstitucion',
                 'value'=>'institucionIdinstitucion.nombre',
             ],
-            [
-                'attribute'=>'tipo_persona_idtipo_persona',
-                'value'=>'tipoPersonaIdtipoPersona.tipo_persona',
-            ],
+            
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

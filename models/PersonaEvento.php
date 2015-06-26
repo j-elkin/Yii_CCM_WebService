@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $evento_idevento
  * @property integer $persona_idpersona
+ * @property integer $tipo_persona_idtipo_persona
  *
  * @property Evento $eventoIdevento
  * @property Persona $personaIdpersona
@@ -29,8 +30,8 @@ class PersonaEvento extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['evento_idevento', 'persona_idpersona'], 'required'],
-            [['evento_idevento', 'persona_idpersona'], 'integer']
+            [['evento_idevento', 'persona_idpersona', 'tipo_persona_idtipo_persona'], 'required'],
+            [['evento_idevento', 'persona_idpersona', 'tipo_persona_idtipo_persona'], 'integer']
         ];
     }
 
@@ -42,6 +43,7 @@ class PersonaEvento extends \yii\db\ActiveRecord
         return [
             'evento_idevento' => 'Evento',
             'persona_idpersona' => 'ID Persona',
+            'tipo_persona_idtipo_persona' => 'Tipo Persona',
         ];
     }
 
@@ -61,5 +63,12 @@ class PersonaEvento extends \yii\db\ActiveRecord
         return $this->hasOne(Persona::className(), ['docPersona' => 'persona_idpersona']);
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTipoPersonaIdtipoPersona()
+    {
+        return $this->hasOne(TipoPersona::className(), ['idtipo_persona' => 'tipo_persona_idtipo_persona']);
+    }
 
 }

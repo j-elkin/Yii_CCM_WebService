@@ -2,6 +2,10 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use kartik\social\Disqus;
+use kartik\social\FacebookPlugin;
+use kartik\social\TwitterPlugin;
+
 $this->title = 'XX Congreso Colombiano de Matemáticas';
 
 ?>
@@ -102,11 +106,22 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
         </div> 
 
         <div class="col-lg-4">
-          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Universidad Nacional de Colombia Sede Manizales</h4>
-          <p>Facultad de Ciencias Exactas y Naturales</p>
+          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Facultad de Ciencias Exactas y Naturales</h4>
+          <p>Universidad Nacional de Colombia Sede Manizales</p>
           <div align="center"><p><a class="btn btn-default" href="http://www.fcen.unal.edu.co/" role="button">Ver Más»</a></p></div>         
         </div> 
       </div><br><br>
     </div>
   <!--Cierra footer-->
 </div>
+
+<?php 
+    /*echo FacebookPlugin::widget(['type'=>FacebookPlugin::POST, 'settings' => ['href'=>'http://facebook.com/ccm2015/posts/867712916633152:0'], 'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
+    echo "<br></br>";
+    echo FacebookPlugin::widget(['type'=>FacebookPlugin::POST, 'settings' => ['href'=>'http://facebook.com/ccm2015/posts/866173546787089:0'], 'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
+   //echo FacebookPlugin::widget(['type'=>FacebookPlugin::FOLLOW, 'settings' => ['href'=>'http://facebook.com/ccm2015'], 'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
+    echo "<br></br><br></br>";*/
+    //echo TwitterPlugin::widget(['type'=>TwitterPlugin::FOLLOW, 'settings' => ['size'=>'large'], 'language' => 'es_CO', 'screenName' => 'https://twitter.com/@conmate2015']);
+    //echo TwitterPlugin::widget(['type'=>TwitterPlugin::TWEET, 'content' => 'Here’s how to embed content from Twitter directly on to your website/blog. It’s SOOO easy! @seosmarty @PostPlanner http://bit.ly/1Dl0pPV', 'settings' => ['href'=>'http://twitter.com/@conmate2015'], 'language' => 'es_CO', 'screenName' => 'https://twitter.com/@conmate2015']);
+    // echo FacebookPlugin::widget(['type'=>FacebookPlugin::ACTIVITY, 'settings' => ['href'=>'http://facebook.com/ccm2015'],'language' => 'es_CO', 'appId' => 'https://www.facebook.com/ccm2015']);
+?>                                                                        
