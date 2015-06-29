@@ -8,7 +8,7 @@ use yii\helpers\Html;
 $this->title = 'Actualizar Tipo de Area: ' . ' ' . $model->idtipo_area;
 $this->params['breadcrumbs'][] = ['label' => 'Tipo Areas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idtipo_area, 'url' => ['view', 'id' => $model->idtipo_area]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Actualizar';
 ?>
 <div class="tipo-area-update">
 

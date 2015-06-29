@@ -18,7 +18,7 @@ use kartik\widgets\Alert;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'persona_docPersona')->dropDownList(
-    	ArrayHelper::map(Persona::find()->all(), 'docPersona', 'docPersona'),
+    	ArrayHelper::map(Persona::find()->all(), 'docPersona', 'documentoNombre'),
     	['prompt' => 'Seleccione documento:' ]
     )?>
     <div id="alertaAlmuerzos" >

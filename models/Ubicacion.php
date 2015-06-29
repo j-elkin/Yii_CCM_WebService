@@ -62,4 +62,40 @@ class Ubicacion extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Evento::className(), ['idevento' => 'evento_idevento']);
     }
+
+    /**
+    * Se encarga de crear una cadena compuesta por el nombre del evento, la ubicación, la fecha y horarios
+    * Esta funcion se llama desde formulario de creación de inscripciones _form.php
+    * @return la cadena
+    */
+    public function getEventoUbicacion(){
+        $idEvento= $this->evento_idevento;
+        $modeloConsulta = Evento::find()
+                            ->where('idevento = :idEvento', [':idEvento' => $idEvento])
+                            ->one();
+
+        $eventoName = (string) $modeloConsulta->nombre;//casting ya que recibe un objeto
+
+        return $this->lugar. '  Fecha: '.$this->fecha.' Hora: ['. $this->hora_inicio .' - '.$this->hora_fin.']  Evento: '.$eventoName;
+    }
+
+
+    /**
+    * Consultar la cantidad de cupos disponibles para la ubicación del evento
+    * @return cantidad de cupos disponbles
+    */
+    public function getCuposDisponibles(){
+        $idUbicacion = $this->idubicacion;
+        $cantidadOcupados = PersonaUbicacion::find()
+                    ->where('ubicacion_idubicacion = :idUbicacion', [':idUbicacion' => $idUbicacion])
+                    ->orderBy('ubicacion_idubicacion')
+                    ->count();
+
+        
+        return $this->limite_cupos - $cantidadOcupados;
+
+
+    }
+
+
 }

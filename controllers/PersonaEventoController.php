@@ -66,7 +66,7 @@ class PersonaEventoController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'evento_idevento' => $model->evento_idevento, 'persona_idpersona' => $model->persona_idpersona]);
         } else {
-            return $this->render('create', [
+            return $this->renderAjax('create', [
                 'model' => $model,
             ]);
         }

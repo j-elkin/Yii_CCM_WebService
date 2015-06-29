@@ -49,7 +49,7 @@ AppAsset::register($this);
                     //['label' => 'Home', 'url' => ['/site/index']],
                     //['label' => 'About', 'url' => ['/site/about']],
                     //['label' => 'Contact', 'url' => ['/site/contact']],
-                    ['label' => '<span class="glyphicon glyphicon-list-alt"></span> Inscripciones', 'url' => ['/persona-evento/index']],
+                    ['label' => '<span class="glyphicon glyphicon-list-alt"></span> Inscripciones', 'url' => ['/persona-ubicacion/index']],
                     
                     ['label' => 'Personas',  'items' => [
                         ['label' => 'Persona', 'url' => ['/persona/index']],

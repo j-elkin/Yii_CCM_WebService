@@ -29,11 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'idubicacion',
-            'hora_inicio',
-            'hora_fin',
+            'eventoIdevento.nombre',
             'lugar',
             'fecha',
-            'eventoIdevento.nombre',
+            'hora_inicio',
+            'hora_fin',
+            'limite_cupos',
+            'cuposDisponibles',
         ],
     ]) ?>
 

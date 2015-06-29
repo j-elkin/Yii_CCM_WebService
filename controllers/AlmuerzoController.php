@@ -74,14 +74,17 @@ class AlmuerzoController extends Controller
                             ->count();
 
             if ($numAlmuerzos == 4){
-                return Alert::widget([
+                /*return Alert::widget([
                     'type' => Alert::TYPE_WARNING,
                     'title' => 'Almuerzos consumidos!',
                     'icon' => 'glyphicon glyphicon-exclamation-sign',
                     'body' => 'La persona con documento N° '.$documento." ya consumio todos los almuerzos.",
                     'showSeparator' => true,
                     'delay' => 6000
-                ]);
+                ]);*/
+                return $this->render('alerta_lim_almuerzo', 
+                    ['model' => $model,]  );
+
             }
             else{
                 $model->save();
