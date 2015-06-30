@@ -42,7 +42,7 @@ $config = [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            //'enableStrictParsing' => true,
+            'enableStrictParsing' => true,
             //'showScriptName' => false,
             'rules' => [ 
                 //'<controller>s' => '<controller>/index',
@@ -59,8 +59,8 @@ $config = [
                 'GET rest/pais-procedencia' => 'rest/pais-procedencia/index',
                 'GET rest/institucion' => 'rest/institucion/index',
 
-                //REGLAS DE URL PARA LA TABLA Evento
-                'GET rest/evento' => 'rest/evento/index',
+                //REGLAS DE URL PARA LA CONSULTA SQL 
+                'POST rest/evento/sql' => 'rest/evento/sql',
             ],
         ],
 

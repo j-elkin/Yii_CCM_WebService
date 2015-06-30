@@ -7,6 +7,7 @@ use app\models\Almuerzo;
 use app\models\AlmuerzoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\db\Query;
 use yii\filters\VerbFilter;
 use kartik\widgets\Alert;
 use kartik\widgets\AlertBlock;
@@ -27,6 +28,37 @@ class AlmuerzoController extends Controller
             ],
         ];
     }
+
+
+    public function actionSql(){
+        $filas = (new Query())
+        ->select(['ta.tipo_area', 'e.idevento', 'e.nombre', 'e.descripcion', 'u.hora_inicio', 'u.hora_fin', 'u.lugar', 'u.limite_cupos', 'u.fecha'])
+        ->from(['ta' => 'tipo_area'])
+        ->innerJoin('evento e', 'ta.idtipo_area = e.tipo_area_idtipo_area')
+        ->innerJoin('ubicacion u', 'e.idevento = u.evento_idevento')
+        ->where([
+            'ta.idtipo_area' => 1,
+            'dayname(u.fecha)' => 'Monday'
+            ])
+        ->all();
+
+        //print_r($filas[0]);
+        /*
+        foreach ( $filas as $fila ){
+            print_r($fila) . "<br><br>";
+            foreach ( $fila as $key=>$value ){
+                echo $key . " => " . $value . "<br>";
+            }
+            echo "<br>";
+        }
+        */
+        
+        return $this->render( 'sql', [
+            'filas' => $filas,
+        ]);
+        
+    }
+    
 
     /**
      * Lists all Almuerzo models.
