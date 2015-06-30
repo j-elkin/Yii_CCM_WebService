@@ -42,25 +42,25 @@ $config = [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            //'enableStrictParsing' => true,
+            'enableStrictParsing' => true,
             //'showScriptName' => false,
             'rules' => [ 
-                /*
                 //'<controller>s' => '<controller>/index',
                 //'<controller>/<id:\d+>' => '<controller>/view',
 
                 //REGLAS DE URL PARA LA TABLA persona
-                'POST persona' => 'persona/index',
-                'persona/<id:\d+>' => 'persona/view',
-                'POST persona/create' => 'persona/create',           
+                'POST rest/persona' => 'rest/persona/index',
+                'rest/persona/<id:\d+>' => 'rest/persona/view',
+                'POST rest/persona/create' => 'rest/persona/create',           
                 //['class' => 'yii\rest\UrlRule', 'controller' => 'persona'],
 
-                //REGLAS DE URL PARA LA TABLA tipo_doc  
-                'GET tipo-doc' => 'tipo-doc/index',
-                'GET pais-procedencia' => 'pais-procedencia/index',
-                'GET institucion' => 'institucion/index',
-                */
+                //REGLAS DE URL PARA LA TABLAS DE COMPLETITUD tipo_doc, pais_procedencia, institucion
+                'GET rest/tipo-doc' => 'rest/tipo-doc/index',
+                'GET rest/pais-procedencia' => 'rest/pais-procedencia/index',
+                'GET rest/institucion' => 'rest/institucion/index',
 
+                //REGLAS DE URL PARA LA CONSULTA SQL 
+                'POST rest/evento/sql' => 'rest/evento/sql',
             ],
         ],
 
