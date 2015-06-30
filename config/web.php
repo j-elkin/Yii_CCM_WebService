@@ -42,7 +42,7 @@ $config = [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'enableStrictParsing' => true,
+            //'enableStrictParsing' => true,//Comentado por Elkin
             //'showScriptName' => false,
             'rules' => [ 
                 //'<controller>s' => '<controller>/index',
