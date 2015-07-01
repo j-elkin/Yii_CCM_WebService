@@ -10,4 +10,5 @@ $(function(){
 	});
 
 	$("#personaubicacion-ubicacion_idubicacion").prop("disabled", true);
+	$("#personaubicacion-ubicacion_idubicacion").attr('title', 'Si desea cambiar de ubicación por favor realice una nueva inscripción y elimine ésta inscripción.');
 });
