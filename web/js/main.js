@@ -8,4 +8,6 @@ $(function(){
 			.find('#modalContent')//#modalContent  id del contenedor div que esta despues de Modal::begin(...code...) 
 			.load($(this).attr('value'));
 	});
+
+	$("#personaubicacion-ubicacion_idubicacion").prop("disabled", true);
 });

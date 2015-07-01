@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'idubicacion',
             'lugar',
             'limite_cupos',
-            'cuposDisponibles',
+            'cupos_disponibles',
             'fecha',
             'hora_inicio',
             'hora_fin',

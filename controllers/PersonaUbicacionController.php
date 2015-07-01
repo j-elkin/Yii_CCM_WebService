@@ -67,18 +67,19 @@ class PersonaUbicacionController extends Controller
         if ($model->load(Yii::$app->request->post()) ) {
 
             $idUbicacion = $model->ubicacion_idubicacion;
-            $cantidad = PersonaUbicacion::find()
+            /*$cantidad = PersonaUbicacion::find()
                         ->where('ubicacion_idubicacion = :idUbicacion', [':idUbicacion' => $idUbicacion])
                         ->orderBy('ubicacion_idubicacion')
                         ->count();
-
+            */
             $ubicacion = Ubicacion::find()
                         ->where('idubicacion = :idUbicacion', [':idUbicacion' => $idUbicacion])
                         ->one();
 
-            $limiteCupos = $ubicacion->limite_cupos;
+            //$limiteCupos = $ubicacion->limite_cupos;
 
-            if($cantidad == $limiteCupos){
+            //if($cantidad == $limiteCupos){
+            if($ubicacion->cupos_disponibles == 0 ){
                 return $this->render('alerta_lim_cupos', 
                     ['model' => $ubicacion,]  );
 
@@ -106,8 +107,22 @@ class PersonaUbicacionController extends Controller
     {
         $model = $this->findModel($persona_docPersona, $ubicacion_idubicacion);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'persona_docPersona' => $model->persona_docPersona, 'ubicacion_idubicacion' => $model->ubicacion_idubicacion]);
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            $idUbicacion = $model->ubicacion_idubicacion;
+            $ubicacion = Ubicacion::find()
+                        ->where('idubicacion = :idUbicacion', [':idUbicacion' => $idUbicacion])
+                        ->one();
+
+            if($ubicacion->cupos_disponibles == 0 ){
+                return $this->render('alerta_lim_cupos', 
+                    ['model' => $ubicacion,]  );
+            }
+            else{
+                $model->save();
+                return $this->redirect(['view', 'persona_docPersona' => $model->persona_docPersona, 'ubicacion_idubicacion' => $model->ubicacion_idubicacion]);
+            }
+            
         } else {
             return $this->render('update', [
                 'model' => $model,

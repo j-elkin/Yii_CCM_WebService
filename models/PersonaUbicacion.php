@@ -82,12 +82,20 @@ class PersonaUbicacion extends \yii\db\ActiveRecord
      */
     public function getNombreEvento()
     {
-        $idEvento = $this->ubicacion_idubicacion;
-        $modeloConsulta = Evento::find()
+        $idPerUbicacion = $this->ubicacion_idubicacion;
+        $modeloConsulta = Ubicacion::find()
+                            ->where('idubicacion = :idPerUbicacion', [':idPerUbicacion' => $idPerUbicacion])
+                            ->one();
+
+        $idEvento = $modeloConsulta->evento_idevento;
+
+
+        $modeloConsulta2 = Evento::find()
                             ->where('idevento = :idEvento', [':idEvento' => $idEvento])
                             ->one();
 
-        $eventoName = (string) $modeloConsulta->nombre;//casting ya que recibe un objeto
+        $eventoName = (string) $modeloConsulta2->nombre;//casting ya que recibe un objeto
+        
         return $eventoName;
     }
 
