@@ -8,4 +8,7 @@ $(function(){
 			.find('#modalContent')//#modalContent  id del contenedor div que esta despues de Modal::begin(...code...) 
 			.load($(this).attr('value'));
 	});
+
+	$("#personaubicacion-ubicacion_idubicacion").prop("disabled", true);
+	$("#personaubicacion-ubicacion_idubicacion").attr('title', 'Si desea cambiar de ubicación por favor realice una nueva inscripción y elimine ésta inscripción.');
 });

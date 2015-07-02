@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'hora_inicio',
             'hora_fin',
             'limite_cupos',
-            'cuposDisponibles',
+            'cupos_disponibles',
         ],
     ]) ?>
 

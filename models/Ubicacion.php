@@ -15,6 +15,7 @@ use Yii;
  * @property integer $evento_idevento
  *
  * @property Evento $eventoIdevento
+ * @property Evento $cupos_disponibles
  */
 class Ubicacion extends \yii\db\ActiveRecord
 {
@@ -84,7 +85,7 @@ class Ubicacion extends \yii\db\ActiveRecord
     * Consultar la cantidad de cupos disponibles para la ubicación del evento
     * @return cantidad de cupos disponbles
     */
-    public function getCuposDisponibles(){
+    /*public function getCuposDisponibles(){
         $idUbicacion = $this->idubicacion;
         $cantidadOcupados = PersonaUbicacion::find()
                     ->where('ubicacion_idubicacion = :idUbicacion', [':idUbicacion' => $idUbicacion])
@@ -95,7 +96,7 @@ class Ubicacion extends \yii\db\ActiveRecord
         return $this->limite_cupos - $cantidadOcupados;
 
 
-    }
+    }*/
 
 
 }
