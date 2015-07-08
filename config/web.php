@@ -42,7 +42,7 @@ $config = [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            //'enableStrictParsing' => true,//Comentado por Elkin
+            'enableStrictParsing' => true,//Comentado por Elkin
             //'showScriptName' => false,
             'rules' => [ 
                 //'<controller>s' => '<controller>/index',
@@ -54,13 +54,17 @@ $config = [
                 'POST rest/persona/create' => 'rest/persona/create',           
                 //['class' => 'yii\rest\UrlRule', 'controller' => 'persona'],
 
-                //REGLAS DE URL PARA LA TABLAS DE COMPLETITUD tipo_doc, pais_procedencia, institucion
+                //REGLAS DE URL PARA LAS TABLAS DE COMPLETITUD tipo_doc, pais_procedencia, institucion
                 'GET rest/tipo-doc' => 'rest/tipo-doc/index',
                 'GET rest/pais-procedencia' => 'rest/pais-procedencia/index',
                 'GET rest/institucion' => 'rest/institucion/index',
 
-                //REGLAS DE URL PARA LA CONSULTA SQL 
+                //REGLAS DE URL PARA LA CONSULTA SQL DE LOS EVENTOS 
+                //ASOCIADOS A UN ÁREA Y DIA EN PARTICULAR
                 'POST rest/evento/sql' => 'rest/evento/sql',
+
+                //REGLAS DE URL PARA LA TABLA DE COMPLETITUD tipo_area
+                'GET rest/tipo-area' => 'rest/tipo-area/index',
             ],
         ],
 
