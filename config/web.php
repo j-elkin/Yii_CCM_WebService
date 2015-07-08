@@ -42,7 +42,7 @@ $config = [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'enableStrictParsing' => true,//Comentado por Elkin
+            //'enableStrictParsing' => true,//Comentado por Elkin
             //'showScriptName' => false,
             'rules' => [ 
                 //'<controller>s' => '<controller>/index',
@@ -65,6 +65,10 @@ $config = [
 
                 //REGLAS DE URL PARA LA TABLA DE COMPLETITUD tipo_area
                 'GET rest/tipo-area' => 'rest/tipo-area/index',
+
+                //REGLAS DE URL PARA LA TABLA per_ubic
+                'POST rest/persona-ubicacion/create' => 'rest/persona-ubicacion/create',
+                'POST rest/persona-ubicacion/delete' => 'rest/persona-ubicacion/delete',
             ],
         ],
 
