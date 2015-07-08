@@ -70,7 +70,7 @@ class PersonaController extends ActiveController
         if ($model->load(Yii::$app->request->post()) ) {
 
             //Obtener la instancia del archivo QR subido
-            $QrName = $model->docPersona;
+            $QrName = $_POST['docPersona'];
             
             $model->codigo_qr = 'uploads/'.$QrName.".png";
             $model->save();
