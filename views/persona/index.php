@@ -29,6 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'docPersona',
             'nombre',
             'apellidos',
+            'asistio',
             'genero',
             //'fecha_nacimiento',
             //'correo_electronico',
