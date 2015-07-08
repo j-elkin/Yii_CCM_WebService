@@ -37,6 +37,10 @@ use dosamigos\datepicker\DatePicker;
     <!--<?= $form->field($model, 'file_qr')->fileInput() ?>-->
     <!--<img src="<?php //echo Yii::$app->params['uploadPath'].'codigo_qr_question.jpg' ?>"> -->
 
+    <?php echo $form->field($model, 'asistio')->dropDownList(['NO' => 'NO', 'SI' => 'SI'],
+    ['prompt'=>'Seleccione asistencia'] 
+    ) ?>
+
     <?= $form->field($model, 'tipo_doc_idtipo_doc')->dropDownList(
         ArrayHelper::map(TipoDoc::find()->all(),'idtipo_doc','tipo_documento'),
         ['prompt'=>'Seleccione documento']

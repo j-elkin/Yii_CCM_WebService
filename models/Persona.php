@@ -16,6 +16,7 @@ use Yii;
  * @property string $correo_electronico
  * @property string $telefono
  * @property resource $codigo_qr
+ * @property string $asistio
  * @property integer $tipo_doc_idtipo_doc
  * @property integer $pais_procedencia_idpais_procedencia
  * @property integer $institucion_idinstitucion
@@ -50,10 +51,11 @@ class Persona extends \yii\db\ActiveRecord
             [['docPersona', 'nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion'], 'required'],
             [[ 'telefono', 'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion'], 'integer'],
             [['correo_electronico'], 'email'],
+            
             //[['file_qr'], 'file', 'extensions'=>'jpg, gif, png'],
             [['codigo_qr'], 'string', 'max' => 100],
             [['docPersona'], 'string', 'max' => 50],
-            [['nombre', 'apellidos', 'genero', 'fecha_nacimiento'], 'string', 'max' => 45]
+            [['nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'asistio'], 'string', 'max' => 45]
         ];
     }
 
@@ -74,7 +76,8 @@ class Persona extends \yii\db\ActiveRecord
             'tipo_doc_idtipo_doc' => 'Tipo de Documento',
             'pais_procedencia_idpais_procedencia' => 'País de Procedencia',
             'institucion_idinstitucion' => 'Institución',
-            'file_qr' => 'Código QR'
+            'file_qr' => 'Código QR',
+            'asistio' => 'Asistió',
         ];
     }
 

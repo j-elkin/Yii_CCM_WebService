@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'fecha_nacimiento',
             'correo_electronico',
             'telefono',
+            'asistio',
             //'codigo_qr',
             //'displayImage',
             'tipoDocIdtipoDoc.tipo_documento',
