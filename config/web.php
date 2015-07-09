@@ -42,16 +42,23 @@ $config = [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            //'enableStrictParsing' => true,//Comentado por Elkin
+            'enableStrictParsing' => false,//Comentado por Elkin
             //'showScriptName' => false,
             'rules' => [ 
                 //'<controller>s' => '<controller>/index',
                 //'<controller>/<id:\d+>' => '<controller>/view',
 
                 //REGLAS DE URL PARA LA TABLA persona
-                'POST rest/persona' => 'rest/persona/index',
                 'rest/persona/<id:\d+>' => 'rest/persona/view',
-                'POST rest/persona/create' => 'rest/persona/create',           
+                'POST rest/persona/create' => 'rest/persona/create',
+                'POST rest/persona/exist' => 'rest/persona/exist',
+
+                'PUT rest/persona/update/<id:\d+>' => 'rest/persona/update',
+                //'persona/update/<id:\d+>' => 'persona/update',
+
+                //REGLAs PARA LOS ALMUERZOS
+                'POST rest/almuerzo/create' => 'rest/almuerzo/create',
+                'POST rest/almuerzo/sql' => 'rest/almuerzo/sql',
                 //['class' => 'yii\rest\UrlRule', 'controller' => 'persona'],
 
                 //REGLAS DE URL PARA LAS TABLAS DE COMPLETITUD tipo_doc, pais_procedencia, institucion
@@ -65,6 +72,11 @@ $config = [
 
                 //REGLAS DE URL PARA LA TABLA DE COMPLETITUD tipo_area
                 'GET rest/tipo-area' => 'rest/tipo-area/index',
+
+                //REGLAS DE URL PARA LA TABLA per_ubic
+                'POST rest/persona-ubicacion/create' => 'rest/persona-ubicacion/create',
+                'POST rest/persona-ubicacion/remove' => 'rest/persona-ubicacion/remove',
+
             ],
         ],
 

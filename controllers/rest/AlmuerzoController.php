@@ -1,64 +1,34 @@
 <?php
 
-namespace app\controllers;
+namespace app\controllers\rest;
 
 use Yii;
 use app\models\Almuerzo;
 use app\models\AlmuerzoSearch;
-use yii\web\Controller;
+use yii\rest\ActiveController;
 use yii\web\NotFoundHttpException;
-use yii\db\Query;
 use yii\filters\VerbFilter;
-use kartik\widgets\Alert;
-use kartik\widgets\AlertBlock;
+use yii\helpers\ArrayHelper;
 
 /**
  * AlmuerzoController implements the CRUD actions for Almuerzo model.
  */
-class AlmuerzoController extends Controller
+class AlmuerzoController extends ActiveController
 {
+
+	public $modelClass = 'app\models\Almuerzo';
+
     public function behaviors()
     {
-        return [
+        return ArrayHelper::merge(parent::behaviors(),  [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['post'],
                 ],
             ],
-        ];
-    }
-
-
-    public function actionSql(){
-        $filas = (new Query())
-        ->select(['ta.tipo_area', 'e.idevento', 'e.nombre', 'e.descripcion', 'u.hora_inicio', 'u.hora_fin', 'u.lugar', 'u.limite_cupos', 'u.fecha'])
-        ->from(['ta' => 'tipo_area'])
-        ->innerJoin('evento e', 'ta.idtipo_area = e.tipo_area_idtipo_area')
-        ->innerJoin('ubicacion u', 'e.idevento = u.evento_idevento')
-        ->where([
-            'ta.idtipo_area' => 1,
-            'dayname(u.fecha)' => 'Monday'
-            ])
-        ->all();
-
-        //print_r($filas[0]);
-        /*
-        foreach ( $filas as $fila ){
-            print_r($fila) . "<br><br>";
-            foreach ( $fila as $key=>$value ){
-                echo $key . " => " . $value . "<br>";
-            }
-            echo "<br>";
-        }
-        */
-        
-        return $this->render( 'sql', [
-            'filas' => $filas,
         ]);
-        
     }
-    
 
     /**
      * Lists all Almuerzo models.
@@ -87,6 +57,21 @@ class AlmuerzoController extends Controller
         ]);
     }
 
+    /*
+        actionNumeroalmuerzos es una función que se llama por método POST al siguiente link:
+        http://localhost/Yii_CCM_WebService/web/index.php/rest/almuerzo/numeroalmuerzos
+        Y consulta la cantidad de almuerzos consurimos por una persona (# de documento obtenido por POST)
+    */
+    public function actionNumeroalmuerzos(){
+        $documento = $_POST['persona_docPersona'];
+
+        $numAlmuerzos = Almuerzo::find()
+                            ->where('persona_docPersona = :documento', [':documento' => $documento])
+                            ->orderBy('persona_docPersona')
+                            ->count();
+        return $numAlmuerzos;
+        
+    }
     /**
      * Creates a new Almuerzo model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -98,32 +83,11 @@ class AlmuerzoController extends Controller
 
         if ($model->load(Yii::$app->request->post()) ) {
             //&& $model->save()
-            //return "alert('hola')";
-            $documento = $model->persona_docPersona;
-            $numAlmuerzos = Almuerzo::find()
-                            ->where('persona_docPersona = :documento', [':documento' => $documento])
-                            ->orderBy('persona_docPersona')
-                            ->count();
-
-            if ($numAlmuerzos >= 4){
-                /*return Alert::widget([
-                    'type' => Alert::TYPE_WARNING,
-                    'title' => 'Almuerzos consumidos!',
-                    'icon' => 'glyphicon glyphicon-exclamation-sign',
-                    'body' => 'La persona con documento N° '.$documento." ya consumio todos los almuerzos.",
-                    'showSeparator' => true,
-                    'delay' => 6000
-                ]);*/
-                return $this->render('alerta_lim_almuerzo', 
-                    ['model' => $model,]  );
-
-            }
-            else{
-                $model->save();
-                return $this->redirect(['view', 'id' => $model->idAlmuerzo]);
-            }
+           
+            $model->save();
+            return $this->redirect(['view', 'id' => $model->idAlmuerzo]);
             
-            //return $this->redirect(['view', 'id' => $model->idAlmuerzo]);
+            
         } else {
             return $this->render('create', [
                 'model' => $model,
