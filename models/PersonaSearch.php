@@ -20,7 +20,7 @@ class PersonaSearch extends Persona
         return [//tipo_doc_idtipo_doc exigia antes tipo integer
             //[['docPersona'], 'integer'],
             [['docPersona','nombre', 'apellidos', 'genero', 'fecha_nacimiento', 'correo_electronico', 'telefono', 'codigo_qr', 
-            'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'asistio'], 'safe'],
+            'tipo_doc_idtipo_doc', 'pais_procedencia_idpais_procedencia', 'institucion_idinstitucion', 'asistio', 'hotel'], 'safe'],
         ];
     }
 
@@ -65,6 +65,7 @@ class PersonaSearch extends Persona
         $query->andFilterWhere([
             'docPersona' => $this->docPersona,
             'asistio' => $this->asistio,
+            'hotel' => $this->hotel
             //'tipo_doc_idtipo_doc' => $this->tipo_doc_idtipo_doc, //Ya no se busca por id (integer)
             //'pais_procedencia_idpais_procedencia' => $this->pais_procedencia_idpais_procedencia,
             //'institucion_idinstitucion' => $this->institucion_idinstitucion,
@@ -82,6 +83,7 @@ class PersonaSearch extends Persona
             ->andFilterWhere(['like', 'correo_electronico', $this->correo_electronico])
             ->andFilterWhere(['like', 'telefono', $this->telefono])
             ->andFilterWhere(['like', 'codigo_qr', $this->codigo_qr])
+            ->andFilterWhere(['like', 'persona.hotel', $this->hotel])
             //nuevo para la busqueda por string
             ->andFilterWhere(['like', 'tipo_doc.tipo_documento', $this->tipo_doc_idtipo_doc])//tipo_doc.tipo_documento (tabla y campo en BD)
             ->andFilterWhere(['like', 'pais_procedencia.nombre', $this->pais_procedencia_idpais_procedencia])

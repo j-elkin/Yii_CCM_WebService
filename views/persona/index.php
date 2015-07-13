@@ -31,6 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'apellidos',
             'asistio',
             'genero',
+
+            'hotel',
             //'fecha_nacimiento',
             //'correo_electronico',
             // 'telefono',

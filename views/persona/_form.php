@@ -33,6 +33,8 @@ use dosamigos\datepicker\DatePicker;
     <?= $form->field($model, 'correo_electronico')->input('email') ?>
 
     <?= $form->field($model, 'telefono')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'hotel')->textInput(['maxlength' => true]) ?>
     
     <!--<?= $form->field($model, 'file_qr')->fileInput() ?>-->
     <!--<img src="<?php //echo Yii::$app->params['uploadPath'].'codigo_qr_question.jpg' ?>"> -->

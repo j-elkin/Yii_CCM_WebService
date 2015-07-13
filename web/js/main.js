@@ -11,4 +11,6 @@ $(function(){
 
 	$("#personaubicacion-ubicacion_idubicacion").prop("disabled", true);
 	$("#personaubicacion-ubicacion_idubicacion").attr('title', 'Si desea cambiar de ubicación por favor realice una nueva inscripción y elimine ésta inscripción.');
+
+	$("#persona-hotel").attr('title', 'Nombre del hotel donde se hospeda');
 });
