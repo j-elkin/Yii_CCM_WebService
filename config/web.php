@@ -77,7 +77,7 @@ $config = [
                 //REGLAS DE URL PARA LA TABLA per_ubic
                 'POST rest/persona-ubicacion/create' => 'rest/persona-ubicacion/create',
                 'POST rest/persona-ubicacion/remove' => 'rest/persona-ubicacion/remove',
-
+                'POST rest/persona-ubicacion/ubicaciones' => 'rest/persona-ubicacion/ubicaciones',
             ],
         ],
 

@@ -9,6 +9,7 @@ use yii\rest\ActiveController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
+use yii\db\Query;
 
 /**
  * PersonaController implements the CRUD actions for Persona model.
@@ -63,10 +64,9 @@ class PersonaController extends ActiveController
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-        public function actionCreate()
+    public function actionCreate()
     {
         $model = new Persona();
-
         if ($model->load(Yii::$app->request->post()) ) {
 
             //Obtener la instancia del archivo QR subido
@@ -81,7 +81,6 @@ class PersonaController extends ActiveController
             $fp = fopen("uploads/".$QrName.".png", "w");
             fwrite($fp, $contene);
             fclose($fp);
-
             return $this->redirect(['view', 'id' => $model->docPersona]);
         } else {
             return $this->render('create', [
@@ -136,5 +135,23 @@ class PersonaController extends ActiveController
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+
+    public function actionExist(){
+        $docPersona = $_POST['docPersona'];
+        $filas = (new Query())
+        ->select(['p.docPersona', 'p.nombre', 'p.apellidos', 'p.correo_electronico'])
+        ->from(['p' => 'persona'])
+        ->where([
+            'p.docPersona' => $docPersona
+            ])
+        ->all();
+
+        //Se retorna resultado que es un array de arrays
+        // IMPORTANTE: Al retornar el la variable $filas, se muestra en 
+        // pantalla el resultado en XML, necesario para acceder por REST
+        // a los datos
+        return $filas;
     }
 }

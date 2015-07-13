@@ -47,10 +47,12 @@ class EventoController extends ActiveController
         $filas = (new Query())
         ->select([
             'e.idevento', 'e.nombre', 'e.descripcion', 'u.idubicacion',  
-            'u.hora_inicio', 'u.hora_fin', 'u.lugar', 'u.limite_cupos', 'u.fecha', 'u.cupos_disponibles'])
+            'u.hora_inicio', 'u.hora_fin', 'u.lugar', 'u.limite_cupos', 'u.fecha', 'u.cupos_disponibles',
+            'te.tipo_evento'])
         ->from(['ta' => 'tipo_area'])
         ->innerJoin('evento e', 'ta.idtipo_area = e.tipo_area_idtipo_area')
         ->innerJoin('ubicacion u', 'e.idevento = u.evento_idevento')
+        ->innerJoin('tipo_evento te', 'e.tipo_evento_idtipo_evento = te.idtipo_evento')
         ->where([
             'ta.idtipo_area' => $idtipo_area,
             'dayname(u.fecha)' => $dia
