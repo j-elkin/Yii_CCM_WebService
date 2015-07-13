@@ -9,6 +9,7 @@ use yii\rest\ActiveController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
+use yii\db\Query;
 
 /**
  * PersonaUbicacionController implements the CRUD actions for PersonaUbicacion model.
@@ -114,9 +115,36 @@ class PersonaUbicacionController extends ActiveController
         }
         else{
             throw new HttpException('The Delete Method is only allowed by using POST Request');
-        }
-        
+        }        
     }
+
+
+    public function actionRemove(){        
+        $docPersona = $_POST['persona_docPersona'];
+        $idUbicacion = $_POST['ubicacion_idubicacion'];
+        PersonaUbicacion::deleteAll('persona_docPersona = :docPersona AND ubicacion_idubicacion = :idUbicacion', 
+            [':docPersona' => $docPersona, ':idUbicacion' => $idUbicacion] );        
+    }
+
+
+    public function actionUbicaciones(){
+        //Se reciben los parametros enviados por POST:
+        $persona_docPersona = $_POST['persona_docPersona'];
+
+        //Se crea la consulta SQL para extraer los eventos asociados a un área y dia en particular
+        $filas = (new Query())
+        ->select(['pu.ubicacion_idubicacion'])
+        ->from(['pu' => 'per_ubi'])
+        ->where(['pu.persona_docPersona' => $persona_docPersona])
+        ->all();
+
+        //Se retorna resultado que es un array de arrays
+        // IMPORTANTE: Al retornar el la variable $filas, se muestra en 
+        // pantalla el resultado en XML, necesario para acceder por REST
+        // a los datos
+        return $filas;
+    }
+
 
     /**
      * Finds the PersonaUbicacion model based on its primary key value.

@@ -1,4 +1,4 @@
-
+﻿
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
@@ -100,17 +100,11 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
         </div> 
         
         <div class="col-lg-4">
-          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Universidad Nacional de Colombia Sede Manizales</h4>
+          <div align="center"><img class="img-circle" src="../views/images/logodima.png" style="width: 140px; height: 140px;"></div><h4>Dirección de Investigación y Extensión Sede Manizales</h4>
           <p>Unversidad Nacional de Colombia una de las mejores 100 de latinoamérica...</p>
-          <div align="center"><p><a class="btn btn-default" href="http://www.manizales.unal.edu.co/" role="button">Ver Más»</a></p></div>         
+          <div align="center"><p><a class="btn btn-default" href="http://www.investigacion.unal.edu.co/dima" role="button">Ver Más»</a></p></div>         
         </div> 
 
-        <div class="col-lg-4">
-          <div align="center"><img class="img-circle" src="../views/images/un.gif" style="width: 140px; height: 140px;"></div><h4>Facultad de Ciencias Exactas y Naturales</h4>
-          <p>Universidad Nacional de Colombia Sede Manizales</p>
-          <div align="center"><p><a class="btn btn-default" href="http://www.fcen.unal.edu.co/" role="button">Ver Más»</a></p></div>         
-        </div> 
-      </div><br><br>
     </div>
   <!--Cierra footer-->
 </div>

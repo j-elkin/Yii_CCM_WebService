@@ -139,13 +139,29 @@ class PersonaController extends Controller
 
             $codigo_qr_consulta = (string) $modeloConsulta->codigo_qr;//casting ya que recibe un objeto
 
-            // uploads/12345.png
-            $separa1 = explode("/", $codigo_qr_consulta );
-            $separa2 = explode(".", $separa1[1]);
-            if($separa2[0] != $documento){
-                //borra el antiguo QR
-                $this->findModel( $documento )->deleteImage($codigo_qr_consulta);//Importante el $documento. Ya no es con $id
-                
+            if($codigo_qr_consulta != null){//Ya se asigno un codigo qr
+
+                // uploads/12345.png
+                $separa1 = explode("/", $codigo_qr_consulta );
+                $separa2 = explode(".", $separa1[1]);
+                if($separa2[0] != $documento){
+                    //borra el antiguo QR
+                    $this->findModel( $documento )->deleteImage($codigo_qr_consulta);//Importante el $documento. Ya no es con $id
+                    
+                    //Estableciento el nuevo QR
+                    $model->codigo_qr='uploads/'.$documento.".png";//Con el nuevo documento
+                    $model->save();
+
+                    //Se genera el Código QR de acuerdo al documento de la persona a través de la API
+                    // y se obtiene el archivo (imagen)
+                    $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$documento."&amp;size=220x220&amp;format=png");
+                    //Almacenar en el servidor.
+                    $fp = fopen("uploads/".$documento.".png", "w");
+                    fwrite($fp, $contene);
+                    fclose($fp);
+                }
+            }else{//NO ha se ha asignado un código qr
+
                 //Estableciento el nuevo QR
                 $model->codigo_qr='uploads/'.$documento.".png";//Con el nuevo documento
                 $model->save();
@@ -158,6 +174,7 @@ class PersonaController extends Controller
                 fwrite($fp, $contene);
                 fclose($fp);
             }
+
 
             return $this->redirect(['view', 'id' => $model->docPersona]);
             //El siquiente bloque se comento porque ya no se carga el codigo qr desde input file.
@@ -205,7 +222,9 @@ class PersonaController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->deleteImage( $this->findModel($id)->codigo_qr );
+        if($this->findModel($id)->codigo_qr != null){
+            $this->findModel($id)->deleteImage( $this->findModel($id)->codigo_qr );
+        }
         $this->findModel($id)->delete();
         
         return $this->redirect(['index']);

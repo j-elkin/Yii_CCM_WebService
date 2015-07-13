@@ -40,7 +40,7 @@ class Evento extends \yii\db\ActiveRecord
         return [
             [['tipo_evento_idtipo_evento', 'CCM_idCCM', 'tipo_area_idtipo_area'], 'required'],
             [['idevento', 'tipo_evento_idtipo_evento', 'CCM_idCCM', 'tipo_area_idtipo_area'], 'integer'],
-            [['nombre'], 'string', 'max' => 45],
+            [['nombre'], 'string', 'max' => 1500],
             [['descripcion'], 'string', 'max' => 1000]
         ];
     }
