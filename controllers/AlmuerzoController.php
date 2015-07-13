@@ -105,7 +105,7 @@ class AlmuerzoController extends Controller
                             ->orderBy('persona_docPersona')
                             ->count();
 
-            if ($numAlmuerzos == 4){
+            if ($numAlmuerzos >= 4){
                 /*return Alert::widget([
                     'type' => Alert::TYPE_WARNING,
                     'title' => 'Almuerzos consumidos!',

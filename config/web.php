@@ -53,14 +53,15 @@ $config = [
                 'POST rest/persona/create' => 'rest/persona/create',
                 'POST rest/persona/exist' => 'rest/persona/exist',
 
-                
+
                 'PUT rest/persona/update/<id:\d+>' => 'rest/persona/update',
+                //'persona/update/<id:\d+>' => 'persona/update',
                                 
 
                 //REGLAs PARA LOS ALMUERZOS
                 'POST rest/almuerzo/create' => 'rest/almuerzo/create',
-                'POST rest/almuerzo/numeroalmuerzos' => 'rest/almuerzo/numeroalmuerzos',
-                //['class' => 'yii\rest\UrlRule', 'controller' => 'persona'],
+                'POST rest/almuerzo/numeroalmuerzos' => 'rest/almuerzo/numeroalmuerzos',                
+                
 
                 //REGLAS DE URL PARA LAS TABLAS DE COMPLETITUD tipo_doc, pais_procedencia, institucion
                 'GET rest/tipo-doc' => 'rest/tipo-doc/index',

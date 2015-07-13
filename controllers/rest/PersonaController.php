@@ -67,8 +67,20 @@ class PersonaController extends ActiveController
     public function actionCreate()
     {
         $model = new Persona();
+        if ($model->load(Yii::$app->request->post()) ) {
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            //Obtener la instancia del archivo QR subido
+            $QrName = $_POST['docPersona'];
+            
+            $model->codigo_qr = 'uploads/'.$QrName.".png";
+            $model->save();
+            //Se genera el Código QR de acuerdo al documento de la persona a través de la API
+            // y se obtiene el archivo (imagen)
+            $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$QrName."&amp;size=220x220&amp;format=png");
+            //Almacenar en el servidor.
+            $fp = fopen("uploads/".$QrName.".png", "w");
+            fwrite($fp, $contene);
+            fclose($fp);
             return $this->redirect(['view', 'id' => $model->docPersona]);
         } else {
             return $this->render('create', [
