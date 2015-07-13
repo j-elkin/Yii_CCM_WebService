@@ -30,7 +30,7 @@ class TipoArea extends \yii\db\ActiveRecord
         return [
             [['tipo_area'], 'required'],
             [['idtipo_area'], 'integer'],
-            [['tipo_area'], 'string', 'max' => 45]
+            [['tipo_area'], 'string', 'max' => 100]
         ];
     }
 
