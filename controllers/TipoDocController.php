@@ -8,6 +8,10 @@ use app\models\TipoDocSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+
+use app\models\User;
+use app\components\AccessRule;
 
 /**
  * TipoDocController implements the CRUD actions for TipoDoc model.
@@ -17,12 +21,58 @@ class TipoDocController extends Controller
     public function behaviors()
     {
         return [
+            
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['post'],
                 ],
             ],
+
+            'access'=>[
+                'class'=>AccessControl::classname(),
+                 // Se ha sobreescrito la configuración de las reglas por defecto en la nueva clase components/AccessRulep.php
+                'ruleConfig' => [
+                    'class' => AccessRule::classname(),
+                ],
+                'only'=>['index', 'create', 'update', 'delete'],
+                'rules'=>[
+                    [
+                        'actions' => ['create'],
+                        'allow'=>true,
+                         //permitido al usuario admin
+                        'roles'=>[
+                            User::ROLE_ADMIN,
+                        ]
+                    ],
+                    [
+                        'actions' => ['update'],
+                        'allow' => true,
+                         //permitido al usuario admin
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                        ]
+                    ],
+                    [
+                        'actions' => ['index'],
+                        'allow' => true,
+                         //permitido a los usuarios admin y logistica
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                            User::ROLE_LOGISTICA
+                        ]
+                    ],
+                    [
+                        'actions' => ['delete'],
+                        'allow' => true,
+                         //permitido al usuario admin
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                        ]
+                    ],
+                ]
+            ],
+
         ];
     }
 

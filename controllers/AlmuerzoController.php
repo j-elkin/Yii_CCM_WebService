@@ -11,6 +11,10 @@ use yii\db\Query;
 use yii\filters\VerbFilter;
 use kartik\widgets\Alert;
 use kartik\widgets\AlertBlock;
+use yii\filters\AccessControl;
+
+use app\models\User;
+use app\components\AccessRule;
 
 /**
  * AlmuerzoController implements the CRUD actions for Almuerzo model.
@@ -20,12 +24,59 @@ class AlmuerzoController extends Controller
     public function behaviors()
     {
         return [
+            
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['post'],
                 ],
             ],
+
+            'access'=>[
+                'class'=>AccessControl::classname(),
+                 // Se ha sobreescrito la configuración de las reglas por defecto en la nueva clase components/AccessRulep.php
+                'ruleConfig' => [
+                    'class' => AccessRule::classname(),
+                ],
+                'only'=>['index', 'create', 'update', 'delete'],
+                'rules'=>[
+                    [
+                        'actions' => ['create'],
+                        'allow'=>true,
+                         //permitido al usuario admin y logistica
+                        'roles'=>[
+                            User::ROLE_ADMIN,
+                            User::ROLE_LOGISTICA
+                        ]
+                    ],
+                    [
+                        'actions' => ['update'],
+                        'allow' => true,
+                         //permitido al usuario admin
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                        ]
+                    ],
+                    [
+                        'actions' => ['index'],
+                        'allow' => true,
+                         //permitido a los usuarios admin y logistica
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                            User::ROLE_LOGISTICA
+                        ]
+                    ],
+                    [
+                        'actions' => ['delete'],
+                        'allow' => true,
+                         //permitido al usuario admin
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                        ]
+                    ],
+                ]
+            ],
+
         ];
     }
 

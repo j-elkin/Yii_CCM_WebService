@@ -9,6 +9,10 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\Ubicacion;
+use yii\filters\AccessControl;
+
+use app\models\User;
+use app\components\AccessRule;
 
 /**
  * PersonaUbicacionController implements the CRUD actions for PersonaUbicacion model.
@@ -18,12 +22,61 @@ class PersonaUbicacionController extends Controller
     public function behaviors()
     {
         return [
+            
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['post'],
                 ],
             ],
+
+            'access'=>[
+                'class'=>AccessControl::classname(),
+                 // Se ha sobreescrito la configuración de las reglas por defecto en la nueva clase components/AccessRulep.php
+                'ruleConfig' => [
+                    'class' => AccessRule::classname(),
+                ],
+                'only'=>['index', 'create', 'update', 'delete'],
+                'rules'=>[
+                    [
+                        'actions' => ['create'],
+                        'allow'=>true,
+                         //permitido al usuario admin y logistica
+                        'roles'=>[
+                            User::ROLE_ADMIN,
+                            User::ROLE_LOGISTICA
+                        ]
+                    ],
+                    [
+                        'actions' => ['update'],
+                        'allow' => true,
+                         //permitido al usuario admin y logistica
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                            User::ROLE_LOGISTICA
+                        ]
+                    ],
+                    [
+                        'actions' => ['index'],
+                        'allow' => true,
+                         //permitido a los usuarios admin y logistica
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                            User::ROLE_LOGISTICA
+                        ]
+                    ],
+                    [
+                        'actions' => ['delete'],
+                        'allow' => true,
+                         //permitido al usuario admin
+                        'roles' => [
+                            User::ROLE_ADMIN,
+                            User::ROLE_LOGISTICA
+                        ]
+                    ],
+                ]
+            ],
+
         ];
     }
 

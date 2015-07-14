@@ -80,11 +80,11 @@ AppAsset::register($this);
                     ]],
 
                     //login
-                    /*Yii::$app->user->isGuest ?
+                    Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :
                         ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                             'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],*/
+                            'linkOptions' => ['data-method' => 'post']],
                 ],
                 //'activeCssClass'=>'activeclass',
 
