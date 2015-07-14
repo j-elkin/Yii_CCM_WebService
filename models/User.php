@@ -13,6 +13,7 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
 
     const ROLE_ADMIN = 10;
     const ROLE_LOGISTICA = 20;
+    const ROLE_INVITADO = 30;
 
     private static $users = [
         '100' => [
@@ -33,13 +34,17 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
             'role' => 20,
             
         ],
+
     ];
+
+    
 
     /**
      * @inheritdoc
      */
     public static function findIdentity($id)
     {
+       
         return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
     }
 
