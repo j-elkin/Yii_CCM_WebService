@@ -121,6 +121,8 @@ class MemoriaController extends Controller
             //Obtener la instancia del archivo subido
             $model->archivo_memoria = UploadedFile::getInstance($model, 'archivo_memoria');
 
+            //$file = $_FILES['archivo_memoria']['tmp_name'];
+
             //Obteniendo el siguiente ID desde la BD
             $id = Memoria::find()->select('max(idmemoria)')->scalar() ;
             $id++;
@@ -131,8 +133,43 @@ class MemoriaController extends Controller
             $model->archivo = $nombre;
             $model->save();
 
-            //guardando el archivo en el servidor
-            $model->archivo_memoria->saveAs('memorias/'.$nombre);
+            //guardando el archivo en el localhost
+            //$model->archivo_memoria->saveAs('memorias/'.$nombre);
+
+            
+            // ============================== ALMACENANDO EL CODIGO QR EN EL SERVIDOR ==============================
+            $contene = file_get_contents( $model->archivo_memoria->tempName );
+            //Se crea la ruta temporal con el archivo temporal
+            $file_temp = tempnam("/tmp", $contene);
+            $gestor = fopen($file_temp, 'w');
+            fwrite($gestor, $contene);
+            fclose($gestor);
+
+            //realizando conexión con el servidor
+            $ftp_server = "ftp.specializedti.com";
+            $ftp_user_name = "jorendonro@specializedti.com";
+            $ftp_user_pass = "fusion3249";
+            //ruta del servidor FTP donde se almacenan los códigos qr
+            $remote_file = '/ccm2015/web/memorias/'.$nombre;
+            // establecer conexión básica
+            $conn_id = ftp_connect($ftp_server, 21) or die("Couldn't connect to $ftp_server"); 
+
+            //iniciar sesión con nombre de usuario y contraseña
+            $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+            // subir el archivo
+            if (ftp_put($conn_id, $remote_file, $file_temp, FTP_BINARY)) {
+             //echo "successfully uploaded $file\n";
+            } else {
+             //echo "There was a problem while uploading $file\n";
+            }
+
+            // cerrando la conección con el servidor ftp
+            ftp_close($conn_id);
+            //borrano el archivo temporal
+            unlink($file_temp);
+            // =======================================================================================
+                    
 
             return $this->redirect(['view', 'id' => $model->idmemoria]);
         } else {
