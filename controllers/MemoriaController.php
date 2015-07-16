@@ -137,7 +137,7 @@ class MemoriaController extends Controller
             //$model->archivo_memoria->saveAs('memorias/'.$nombre);
 
             
-            // ============================== ALMACENANDO EL CODIGO QR EN EL SERVIDOR ==============================
+            // ============================== ALMACENANDO LA MEMORIA EN EL SERVIDOR ==============================
             $contene = file_get_contents( $model->archivo_memoria->tempName );
             //Se crea la ruta temporal con el archivo temporal
             $file_temp = tempnam("/tmp", $contene);
