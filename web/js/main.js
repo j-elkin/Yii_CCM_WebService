@@ -13,4 +13,13 @@ $(function(){
 	$("#personaubicacion-ubicacion_idubicacion").attr('title', 'Si desea cambiar de ubicación por favor realice una nueva inscripción y elimine ésta inscripción.');
 
 	$("#persona-hotel").attr('title', 'Nombre del hotel donde se hospeda');
+
+	$campoCedula = $("#persona-docpersona").val();
+	if( $campoCedula == ""){
+		$("#persona-docpersona").removeAttr('disabled')
+	}
+	else{
+		$("#persona-docpersona").prop('disabled', true);
+	}
+	
 });
