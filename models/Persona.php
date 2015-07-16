@@ -134,7 +134,7 @@ class Persona extends \yii\db\ActiveRecord
     
 
 
-    const IMAGE_PLACEHOLDER = '/Yii_CCM_WebService/web/uploads/codigo_qr_question.jpg';
+    const IMAGE_PLACEHOLDER = 'http://ccm2015.specializedti.com/uploads/codigo_qr_question.jpg';
      /**
      * Obtiene la imagen almacenada en la BD para su visualización
      * @return $image
@@ -155,7 +155,8 @@ class Persona extends \yii\db\ActiveRecord
             ]);
         }
         else {
-           $image = Html::img(Yii::$app->urlManager->baseUrl . '/' . $model->codigo_qr, [
+           //$image = Html::img(Yii::$app->urlManager->baseUrl . '/' . $model->codigo_qr, [
+            $image = Html::img('http://ccm2015.specializedti.com/'. $model->codigo_qr, [
            //$image = Html::img($model->codigo_qr, [
                 'alt'=>Yii::t('app', 'No existe el archivo de código QR para ') . $model->docPersona,
                 'title'=>Yii::t('app', 'Código QR ').$model->docPersona,
@@ -177,11 +178,36 @@ class Persona extends \yii\db\ActiveRecord
     public function deleteImage($rutaPath) {
         //$image = Yii::$app->basePath . '/web/' . $this->codigo_qr;
         //$image = '../web/' . $this->codigo_qr;
-        $image = '../web/' . $rutaPath;
+       /* $image = '../web/' . $rutaPath;
         if (unlink($image)) {
             return true;
         }
-        return false;
+        return false;*/
+        $respuesta = false;
+
+        $ftp_server = "ftp.specializedti.com";
+        $ftp_user_name = "jorendonro@specializedti.com";
+        $ftp_user_pass = "fusion3249";
+        $fileQrCode = "/ccm2015/web/".$rutaPath;
+        // establecer conexión básica
+        $conn_id = ftp_connect($ftp_server, 21) or die("Couldn't connect to $ftp_server"); 
+
+        // iniciar sesión con nombre de usuario y contraseña
+        $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+        // intentar eliminar el archivo
+        if (ftp_delete($conn_id, $fileQrCode)) {
+            //echo "Se borro la imagen\n";
+            $respuesta = true;
+        } else {
+            //echo "No se pudo borrar la imagen\n";
+            $respuesta = false;
+        }
+
+        // cerrando la conección con el servidor ftp
+        ftp_close($conn_id);
+
+        return $respuesta;
     }
 
     /**

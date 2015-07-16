@@ -139,13 +139,52 @@ class PersonaController extends Controller
 
             $model->codigo_qr = 'uploads/'.$QrName.".png";
             $model->save();
+            
+            // ============================== ALMACENANDO EL CODIGO QR EN EL SERVIDOR ==============================
             //Se genera el Código QR de acuerdo al documento de la persona a través de la API
             // y se obtiene el archivo (imagen)
-            $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$QrName."&amp;size=220x220&amp;format=png");
+            $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$documento."&amp;size=220x220&amp;format=png");
+
+            //Se crea la ruta temporal con el archivo temporal
+            $file_temp = tempnam("/tmp", $documento."_QrCode");
+            $gestor = fopen($file_temp, 'w');
+            fwrite($gestor, $contene);
+            fclose($gestor);
+
+            //realizando conexión con el servidor
+            $ftp_server = "ftp.specializedti.com";
+            $ftp_user_name = "jorendonro@specializedti.com";
+            $ftp_user_pass = "fusion3249";
+            //ruta del servidor FTP donde se almacenan los códigos qr
+            $remote_file = '/ccm2015/web/uploads/'.$documento.'.png';
+            // establecer conexión básica
+            $conn_id = ftp_connect($ftp_server, 21) or die("Couldn't connect to $ftp_server"); 
+
+            //iniciar sesión con nombre de usuario y contraseña
+            $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+            // subir el archivo
+            if (ftp_put($conn_id, $remote_file, $file_temp, FTP_BINARY)) {
+             //echo "successfully uploaded $file\n";
+            } else {
+             //echo "There was a problem while uploading $file\n";
+            }
+
+            // cerrando la conección con el servidor ftp
+            ftp_close($conn_id);
+            //borrano el archivo temporal
+            unlink($file_temp);
+            // =======================================================================================
+                    
+            
+            //PARA ALMACENAR EN EL LOCALHOST
+            //Se genera el Código QR de acuerdo al documento de la persona a través de la API
+            // y se obtiene el archivo (imagen)
+            /*$contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$QrName."&amp;size=220x220&amp;format=png");
             //Almacenar en el servidor.
             $fp = fopen("uploads/".$QrName.".png", "w");
             fwrite($fp, $contene);
-            fclose($fp);
+            fclose($fp);*/
 
             return $this->redirect(['view', 'id' => $model->docPersona]);
         } else {
@@ -203,13 +242,48 @@ class PersonaController extends Controller
                     $model->codigo_qr='uploads/'.$documento.".png";//Con el nuevo documento
                     $model->save();
 
+                    // ============================== ALMACENANDO EL CODIGO QR EN EL SERVIDOR ==============================
                     //Se genera el Código QR de acuerdo al documento de la persona a través de la API
                     // y se obtiene el archivo (imagen)
                     $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$documento."&amp;size=220x220&amp;format=png");
-                    //Almacenar en el servidor.
-                    $fp = fopen("uploads/".$documento.".png", "w");
+
+                    //Se crea la ruta temporal con el archivo temporal
+                    $file_temp = tempnam("/tmp", $documento."_QrCode");
+                    $gestor = fopen($file_temp, 'w');
+                    fwrite($gestor, $contene);
+                    fclose($gestor);
+
+                    //realizando conexión con el servidor
+                    $ftp_server = "ftp.specializedti.com";
+                    $ftp_user_name = "jorendonro@specializedti.com";
+                    $ftp_user_pass = "fusion3249";
+                    //ruta del servidor FTP donde se almacenan los códigos qr
+                    $remote_file = '/ccm2015/web/uploads/'.$documento.'.png';
+                    // establecer conexión básica
+                    $conn_id = ftp_connect($ftp_server, 21) or die("Couldn't connect to $ftp_server"); 
+
+                    //iniciar sesión con nombre de usuario y contraseña
+                    $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+                    // subir el archivo
+                    if (ftp_put($conn_id, $remote_file, $file_temp, FTP_BINARY)) {
+                     //echo "successfully uploaded $file\n";
+                    } else {
+                     //echo "There was a problem while uploading $file\n";
+                    }
+
+                    // cerrando la conección con el servidor ftp
+                    ftp_close($conn_id);
+                    //borrano el archivo temporal
+                    unlink($file_temp);
+                    // =======================================================================================
+                    
+
+
+                    //Almacenar en el LOCALHOST.
+                    /*$fp = fopen("uploads/".$documento.".png", "w");
                     fwrite($fp, $contene);
-                    fclose($fp);
+                    fclose($fp);*/
                 }
             }else{//NO ha se ha asignado un código qr
 
@@ -217,13 +291,51 @@ class PersonaController extends Controller
                 $model->codigo_qr='uploads/'.$documento.".png";//Con el nuevo documento
                 $model->save();
 
+                // ============================== ALMACENANDO EL CODIGO QR EN EL SERVIDOR ==============================
                 //Se genera el Código QR de acuerdo al documento de la persona a través de la API
+                // y se obtiene el archivo (imagen)
+                $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$documento."&amp;size=220x220&amp;format=png");
+
+                //Se crea la ruta temporal con el archivo temporal
+                $file_temp = tempnam("/tmp", $documento."_QrCode");
+                $gestor = fopen($file_temp, 'w');
+                fwrite($gestor, $contene);
+                fclose($gestor);
+
+                //realizando conexión con el servidor
+                $ftp_server = "ftp.specializedti.com";
+                $ftp_user_name = "jorendonro@specializedti.com";
+                $ftp_user_pass = "fusion3249";
+                //ruta del servidor FTP donde se almacenan los códigos qr
+                $remote_file = '/ccm2015/web/uploads/'.$documento.'.png';
+                // establecer conexión básica
+                $conn_id = ftp_connect($ftp_server, 21) or die("Couldn't connect to $ftp_server"); 
+
+                //iniciar sesión con nombre de usuario y contraseña
+                $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+                // subir el archivo
+                if (ftp_put($conn_id, $remote_file, $file_temp, FTP_BINARY)) {
+                 //echo "successfully uploaded $file\n";
+                } else {
+                 //echo "There was a problem while uploading $file\n";
+                }
+
+                // cerrando la conección con el servidor ftp
+                ftp_close($conn_id);
+                //borrano el archivo temporal
+                unlink($file_temp);
+                // =======================================================================================
+                    
+
+                //PARA ALMACENAR EN EL LOCALHOST
+                /*//Se genera el Código QR de acuerdo al documento de la persona a través de la API
                 // y se obtiene el archivo (imagen)
                 $contene = file_get_contents("https://api.qrserver.com/v1/create-qr-code/?data=".$documento."&amp;size=220x220&amp;format=png");
                 //Almacenar en el servidor.
                 $fp = fopen("uploads/".$documento.".png", "w");
                 fwrite($fp, $contene);
-                fclose($fp);
+                fclose($fp);*/
             }
 
 

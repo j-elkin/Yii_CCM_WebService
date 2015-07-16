@@ -106,13 +106,39 @@ class Memoria extends \yii\db\ActiveRecord
     */
     public function deleteArchivoMemoria(){
        //$image = Yii::$app->basePath . '/web/' . $this->codigo_qr;
-        $memo = '../web/memorias/' . $this->archivo;
+        /*$memo = '../web/memorias/' . $this->archivo;
         if (unlink($memo)) {
             //$this->codigo_qr = null;
             //$this->save();
             return true;
         }
-        return false;
+        return false;*/
+
+        $respuesta = false;
+
+        $ftp_server = "ftp.specializedti.com";
+        $ftp_user_name = "jorendonro@specializedti.com";
+        $ftp_user_pass = "fusion3249";
+        $fileMemoria = "/ccm2015/web/memorias/".$this->archivo;
+        // establecer conexión básica
+        $conn_id = ftp_connect($ftp_server, 21) or die("Couldn't connect to $ftp_server"); 
+
+        // iniciar sesión con nombre de usuario y contraseña
+        $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
+
+        // intentar eliminar el archivo
+        if (ftp_delete($conn_id, $fileMemoria)) {
+            //echo "Se borro la imagen\n";
+            $respuesta = true;
+        } else {
+            //echo "No se pudo borrar la imagen\n";
+            $respuesta = false;
+        }
+
+        // cerrando la conección con el servidor ftp
+        ftp_close($conn_id);
+
+        return $respuesta;
     }
 
 }

@@ -22,7 +22,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <link rel="icon" href="/Yii_CCM_WebService/views/images/logo.jpg">
+    <link rel="icon" href="http://ccm2015.specializedti.com/images/logo.jpg">
     <?php $this->head() ?>
 </head>
 <body>
@@ -81,8 +81,8 @@ AppAsset::register($this);
 
                     //login
                     Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                        ['label' => '<span class="glyphicon glyphicon-log-in"></span> Entrar', 'url' => ['/site/login']] :
+                        ['label' => '<span class="glyphicon glyphicon-log-out"></span> Salir (' . Yii::$app->user->identity->username . ')',
                             'url' => ['/site/logout'],
                             'linkOptions' => ['data-method' => 'post']],
                 ],

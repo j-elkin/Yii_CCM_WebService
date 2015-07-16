@@ -68,13 +68,13 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
             <li data-target="#myCarousel" data-slide-to="5"></li>
           </ol>
           <!-- Carousel items -->
-          <div class="carousel-inner">
-            <div class="active item" align="center"><img src="../views/images/carousel/banner.png" alt="banner1" /></div>
-            <div class="item" align="center"><img  src="../views/images/carousel/1.jpg" alt="banner2" /></div>
-            <div class="item" align="center"><img  src="../views/images/carousel/3.jpg" alt="banner2" /></div>
-            <div class="item" align="center"><img  src="../views/images/carousel/2.jpg" alt="banner3" /></div>
-            <div class="item" align="center"><img  src="../views/images/carousel/4.jpg" alt="banner4" /></div>
-            <div class="item" align="center"><img  src="../views/images/carousel/alojamiento.jpg" alt="banner5" /></div>
+           <div class="carousel-inner">
+            <div class="active item" align="center"><img src="http://ccm2015guest.specializedti.com/images/carousel/banner.png" alt="banner1" /></div>
+            <div class="item" align="center"><img  src="http://ccm2015.specializedti.com/images/carousel/1.jpg" alt="banner2" /></div>
+            <div class="item" align="center"><img  src="http://ccm2015.specializedti.com/images/carousel/3.jpg" alt="banner2" /></div>
+            <div class="item" align="center"><img  src="http://ccm2015.specializedti.com/images/carousel/2.jpg" alt="banner3" /></div>
+            <div class="item" align="center"><img  src="http://ccm2015.specializedti.com/images/carousel/4.jpg" alt="banner4" /></div>
+            <div class="item" align="center"><img  src="http://ccm2015.specializedti.com/images/carousel/alojamiento.jpg" alt="banner5" /></div>
           </div>
           <!-- Carousel nav -->
           <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -88,19 +88,19 @@ $this->title = 'XX Congreso Colombiano de Matemáticas';
     <div class="container marketing">
       <div class="row">
         <div class="col-lg-4">
-            <div align="center"><img class="img-circle" src="../views/images/logo_scm.png" style="width: 140px; height: 140px;"></div><h4>Sociedad Colombiana de Matemáticas</h4>
+            <div align="center"><img class="img-circle" src="http://ccm2015.specializedti.com/images/logo_scm.png" style="width: 140px; height: 140px;"></div><h4>Sociedad Colombiana de Matemáticas</h4>
             <p>El logotipo de la Sociedad Colombiana de Matemáticas fue diseñado por el maestro colombiano ANTONIO GRASS, conocido estudioso del arte pre-hispánico...</p>
             <div align="center"><p><a class="btn btn-default" href="http://www.scm.org.co/" role="button">Ver Más»</a></p></div>
         </div>
         
         <div class="col-lg-4">
-          <div align="center"><img class="img-circle" src="../views/images/logo.jpg" style="width: 140px; height: 140px;"></div><h4>XX Congreso Colombiano de Matemáticas.</h4>
+          <div align="center"><img class="img-circle" src="http://ccm2015.specializedti.com/images/logo.jpg" style="width: 140px; height: 140px;"></div><h4>XX Congreso Colombiano de Matemáticas.</h4>
           <p>El evento espera contar con la presencia de conferencistas e investigadores nacionales e internacionales...</p>
           <div align="center"><p><a class="btn btn-default" href="http://www.xxcongresocolombianodematematicas.co/index.php/" role="button">Ver Más»</a></p></div>         
         </div> 
         
         <div class="col-lg-4">
-          <div align="center"><img class="img-circle" src="../views/images/logodima.png" style="width: 140px; height: 140px;"></div><h4>Dirección de Investigación y Extensión Sede Manizales</h4>
+          <div align="center"><img class="img-circle" src="http://ccm2015.specializedti.com/images/logodima.png" style="width: 140px; height: 140px;"></div><h4>Dirección de Investigación y Extensión Sede Manizales</h4>
           <p>Unversidad Nacional de Colombia una de las mejores 100 de latinoamérica...</p>
           <div align="center"><p><a class="btn btn-default" href="http://www.investigacion.unal.edu.co/dima" role="button">Ver Más»</a></p></div>         
         </div> 
