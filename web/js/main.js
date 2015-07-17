@@ -21,5 +21,7 @@ $(function(){
 	else{
 		$("#persona-docpersona").prop('disabled', true);
 	}
+
+	$('#memoria-archivo').attr('title', 'Por favor copie la url en donde se encuetra almacenada la memoria.')
 	
 });

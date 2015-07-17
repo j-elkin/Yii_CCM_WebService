@@ -118,16 +118,24 @@ class MemoriaController extends Controller
 
         if ($model->load(Yii::$app->request->post()) ) {
 
+            //Obteniendo el siguiente ID desde la BD
+            
+            $model->save();
+
+
+
+            /*
             //Obtener la instancia del archivo subido
             $model->archivo_memoria = UploadedFile::getInstance($model, 'archivo_memoria');
 
-            //$file = $_FILES['archivo_memoria']['tmp_name'];
+            //$file = $_POST['Memoria[archivo_memoria]']['tmp_name'];
 
             //Obteniendo el siguiente ID desde la BD
             $id = Memoria::find()->select('max(idmemoria)')->scalar() ;
             $id++;
 
             $nombre = $model->archivo_memoria->name;
+            //$nombre = 'memo.pdf';
             $nombre = $id.'_'.$nombre;
             //Guardando el nombre del archivo memoria en el campo archivo de la tabla memoria de la BD
             $model->archivo = $nombre;
@@ -169,7 +177,7 @@ class MemoriaController extends Controller
             //borrano el archivo temporal
             unlink($file_temp);
             // =======================================================================================
-                    
+            */  
 
             return $this->redirect(['view', 'id' => $model->idmemoria]);
         } else {
@@ -191,9 +199,10 @@ class MemoriaController extends Controller
         //aplicando scenario de reglas de validación del formulario. Acá ya no se debe de exigir el archivo
         $model->scenario = 'actualiza';
 
-        $nueva_memoria = UploadedFile::getInstance($model, 'archivo_memoria');
+        //$nueva_memoria = UploadedFile::getInstance($model, 'archivo_memoria');
         if ($model->load(Yii::$app->request->post()) ) {
-
+            $model->save();
+            /*
             if(!empty($nueva_memoria) ){//Se ha cargado un nuevo archivo de memoria
                 //Borra el antiguo archivo de memoria
                 $model->deleteArchivoMemoria();
@@ -218,8 +227,8 @@ class MemoriaController extends Controller
 
                 return $this->redirect(['view', 'id' => $model->idmemoria]);
             }
-
-            
+            */
+            return $this->redirect(['view', 'id' => $model->idmemoria]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -235,7 +244,7 @@ class MemoriaController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->deleteArchivoMemoria();
+        //$this->findModel($id)->deleteArchivoMemoria();
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

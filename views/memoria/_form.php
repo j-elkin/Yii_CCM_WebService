@@ -20,7 +20,8 @@ use app\models\Evento;
 
     <?= $form->field($model, 'descripcion')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'archivo_memoria')->fileInput() ?>
+    <!--<?= $form->field($model, 'archivo_memoria')->fileInput() ?>-->
+    <?= $form->field($model, 'archivo')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'evento_idevento')->dropDownList(
         ArrayHelper::map(Evento::find()->all(),'idevento','nombre'),

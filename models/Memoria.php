@@ -46,11 +46,12 @@ class Memoria extends \yii\db\ActiveRecord
         // entonces para cuando se crea una memoria se exige que se cargue un archivo desde el formulario
         // pero para cuando se actualice una memoria se tiene que quitar esta regla, pues puede que no se cambie el archivo
         return [
-            [['nombre', 'archivo', 'evento_idevento', 'archivo_memoria'], 'required', 'on' => 'registro'],
+            //[['nombre', 'archivo', 'evento_idevento', 'archivo_memoria'], 'required', 'on' => 'registro'],
+            [['nombre', 'archivo', 'evento_idevento'], 'required', 'on' => 'registro'],
             [['nombre', 'evento_idevento'], 'required', 'on' => 'actualiza'],
             [['idmemoria', 'evento_idevento'], 'integer'],
-            [['archivo'], 'string'],
-            [['archivo_memoria'], 'file', 'extensions' => 'pdf'],
+            [['archivo'], 'string', 'max' => 200],
+            //[['archivo_memoria'], 'file', 'extensions' => 'pdf'],
             [['nombre'], 'string', 'max' => 45],
             [['descripcion'], 'string', 'max' => 1000]
         ];
@@ -92,7 +93,9 @@ class Memoria extends \yii\db\ActiveRecord
         $file_memo = null;
 
         //$file_memo = Html::a($model->archivo, Yii::$app->urlManager->baseUrl . '/memorias/' . $model->archivo, [
-        $file_memo = Html::a($model->archivo, Yii::$app->urlManager->baseUrl .'/download.php?filename='.$model->archivo, [
+        
+        //$file_memo = Html::a($model->archivo, Yii::$app->urlManager->baseUrl .'/download.php?filename='.$model->archivo, [
+        $file_memo = Html::a($model->nombre.'.pdf', $model->archivo, [
                 'alt'=>Yii::t('app', 'Archivo memoria '),
                 'title'=>Yii::t('app', 'Descargar memoria'),
             ]);
